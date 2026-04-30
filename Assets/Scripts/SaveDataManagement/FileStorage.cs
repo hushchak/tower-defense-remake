@@ -36,6 +36,7 @@ public class FileStorage<T> where T : class
         {
             EnsureDirectory();
             File.WriteAllText(filePath, JsonUtility.ToJson(data, true));
+            Debug.Log($"File at: {filePath} created");
         }
         catch (Exception e)
         {

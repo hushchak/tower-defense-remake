@@ -1,14 +1,15 @@
 using System.Collections.Generic;
 
+[System.Serializable]
 public class GameData
 {
-    public List<string> UnlockedLevels { get; private set; }
+    public List<string> UnlockedLevels;
 
     public GameData()
     {
         UnlockedLevels = new List<string>
         {
-            "plains"
+            SceneList.Names.Levels.Plains
         };
     }
 }

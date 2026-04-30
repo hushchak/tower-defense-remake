@@ -10,5 +10,10 @@ public static class SceneList
     {
         public const string MainMenu = "MainMenu";
         public const string Level = "Level";
+
+        public class Levels
+        {
+            public const string Plains = "Plains";
+        }
     }
 }

@@ -1,16 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Bootstrap : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private async void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        await SceneLoader.LoadScene(SceneList.Slots.Main, SceneList.Names.MainMenu, SceneArgs.Empty);
     }
 }
