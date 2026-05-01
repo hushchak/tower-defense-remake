@@ -8,7 +8,8 @@ public static class SceneList
 
     public class Names
     {
-        public const string MainMenu = "MainMenu";
+        public const string StartScreen = "StartScreen";
+        public const string LevelMenu = "LevelMenu";
         public const string Level = "Level";
 
         public class Levels
