@@ -13,7 +13,9 @@ public class LevelRoot : SceneRoot
         LevelArgs levelArgs = (LevelArgs)args;
 
         Debug.Log($"Loading level: {levelArgs.LevelName}");
-        // TODO: Get level prefab from Recources folder and instantiate it
+        Level level = Instantiate(Resources.Load<Level>($"Levels/{levelArgs.LevelName}"));
+        Debug.Log($"Level {levelArgs.LevelName} is loaded");
+
         // TODO: Intialization of level prefab
     }
 }
