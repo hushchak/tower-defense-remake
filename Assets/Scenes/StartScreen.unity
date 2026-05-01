@@ -231,7 +231,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 516229173}
-  - component: {fileID: 516229172}
   - component: {fileID: 516229174}
   m_Layer: 0
   m_Name: Root
@@ -240,18 +239,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &516229172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 516229171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7f3eda85db04a4895a0a702352e91d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SceneRoot
 --- !u!4 &516229173
 Transform:
   m_ObjectHideFlags: 0
@@ -278,9 +265,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 516229171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e124d168bd5fc440aaea2518b617a4df, type: 3}
+  m_Script: {fileID: 11500000, guid: 647b6b57ad24f4a2382d712c930f85fc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StartScreen
+  m_EditorClassIdentifier: Assembly-CSharp::StartScreenRoot
 --- !u!1001 &677419457
 PrefabInstance:
   m_ObjectHideFlags: 0
