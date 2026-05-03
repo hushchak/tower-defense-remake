@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8f7452ae8324f6eadf4357966dc1a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TowerGrid
+  contextMenuRequestChannel: {fileID: 11400000, guid: 1b93b589a98f74dea86c0f9131d77539, type: 2}
   gridSize: {x: 21, y: 14}
   gridOrigin: {x: -9, y: -7}
   gridCellSize: {x: 1, y: 1}

@@ -2,10 +2,14 @@ using UnityEngine;
 
 public class TowerGrid : MonoBehaviour
 {
+    [SerializeField] private EventChannelContextMenuRequest contextMenuRequestChannel;
+
+    [Space]
     [SerializeField] private Vector2Int gridSize;
     [SerializeField] private Vector2 gridOrigin;
     [SerializeField] private Vector2 gridCellSize;
 
+    [Space]
     [SerializeField] private ClickGrid clickGrid;
 
     private Grid<bool> grid;
@@ -25,14 +29,17 @@ public class TowerGrid : MonoBehaviour
         clickGrid.OnClick -= HandleClick;
     }
 
-    private void HandleClick(Vector2 clickPosition)
+    private void HandleClick(Vector2 pointerScreenPosition)
     {
-        if (!grid.TryGetIndex(clickPosition, out Vector2Int index))
+        Vector2 pointerWorldPosition = Camera.main.ScreenToWorldPoint(pointerScreenPosition);
+        if (!grid.TryGetIndex(pointerWorldPosition, out Vector2Int index))
         {
             Debug.LogWarning("You are trying to handle click that is outside of tower grid");
             return;
         }
         Debug.Log($"Cell center ({index.x}, {index.y}): {GetCellCenter(index.x, index.y)}");
+
+        contextMenuRequestChannel.Raise(new ContextMenuRequest(index, pointerScreenPosition, new ContextMenuEntry[0]));
     }
 
     private Vector2 GetCellCenter(int x, int y)
