@@ -182,7 +182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2962114924620495276, guid: c20b30514ff544a0d9f645e638e40c6b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 2962114924620495276, guid: c20b30514ff544a0d9f645e638e40c6b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -218,27 +218,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7958566750826988393, guid: c20b30514ff544a0d9f645e638e40c6b, type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 0.24528301
+      value: 0.103773594
       objectReference: {fileID: 0}
     - target: {fileID: 7958566750826988393, guid: c20b30514ff544a0d9f645e638e40c6b, type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 0.24528301
+      value: 0.103773594
       objectReference: {fileID: 0}
     - target: {fileID: 7958566750826988393, guid: c20b30514ff544a0d9f645e638e40c6b, type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 0.24528301
-      objectReference: {fileID: 0}
-    - target: {fileID: 7958566750826988393, guid: c20b30514ff544a0d9f645e638e40c6b, type: 3}
-      propertyPath: m_NormalizedViewPortRect.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7958566750826988393, guid: c20b30514ff544a0d9f645e638e40c6b, type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7958566750826988393, guid: c20b30514ff544a0d9f645e638e40c6b, type: 3}
-      propertyPath: m_NormalizedViewPortRect.height
-      value: 1
+      value: 0.103773594
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
