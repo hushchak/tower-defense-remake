@@ -1,9 +1,12 @@
-public class ContextMenuEntry
-{
-    public string Name;
+using TMPro;
+using UnityEngine;
 
-    public ContextMenuEntry(string name)
+public class ContextMenuEntry : MonoBehaviour
+{
+    [SerializeField] private TMP_Text text;
+
+    public void Setup(string name)
     {
-        Name = name;
+        text.text = name;
     }
 }

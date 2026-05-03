@@ -37,9 +37,20 @@ public class TowerGrid : MonoBehaviour
             Debug.LogWarning("You are trying to handle click that is outside of tower grid");
             return;
         }
-        Debug.Log($"Cell center ({index.x}, {index.y}): {GetCellCenter(index.x, index.y)}");
 
-        contextMenuRequestChannel.Raise(new ContextMenuRequest(index, pointerScreenPosition, new ContextMenuEntry[0]));
+        contextMenuRequestChannel.Raise(
+            new ContextMenuRequest(
+                index,
+                pointerScreenPosition,
+                new ContextMenuEntryData[]
+                {
+                    new ContextMenuEntryData("Spear 1"),
+                    new ContextMenuEntryData("Rock"),
+                    new ContextMenuEntryData("Wizard 1"),
+                    new ContextMenuEntryData("Sell: 10$")
+                }
+            )
+        );
     }
 
     private Vector2 GetCellCenter(int x, int y)
