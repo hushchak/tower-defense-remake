@@ -1,32 +1,36 @@
+using System;
 using UnityEngine;
 
 public class TowerGrid : MonoBehaviour
 {
     [SerializeField] private EventChannelContextMenuRequest contextMenuRequestChannel;
-
+    [SerializeField] private EventChannelContextMenuResponce contextMenuResponceChannel;
     [Space]
     [SerializeField] private Vector2Int gridSize;
     [SerializeField] private Vector2 gridOrigin;
     [SerializeField] private Vector2 gridCellSize;
-
     [Space]
     [SerializeField] private ClickGrid clickGrid;
+    [SerializeField] private NullTower nullTowerPrefab;
 
-    private Grid<bool> grid;
+    private Grid<Tower> grid;
 
     private void Awake()
     {
-        grid = new Grid<bool>(gridSize.x, gridSize.y, gridCellSize, gridOrigin);
+        grid = new Grid<Tower>(gridSize.x, gridSize.y, gridCellSize, gridOrigin);
+        FillWithNull();
     }
 
     private void OnEnable()
     {
         clickGrid.OnClick += HandleClick;
+        contextMenuResponceChannel.Subscribe(HandleContextMenuResponce);
     }
 
     private void OnDisable()
     {
         clickGrid.OnClick -= HandleClick;
+        contextMenuResponceChannel.Unsubscribe(HandleContextMenuResponce);
     }
 
     private void HandleClick(Vector2 pointerScreenPosition)
@@ -38,24 +42,76 @@ public class TowerGrid : MonoBehaviour
             return;
         }
 
-        contextMenuRequestChannel.Raise(
-            new ContextMenuRequest(
-                index,
-                pointerScreenPosition,
-                new ContextMenuEntryData[]
-                {
-                    new ContextMenuEntryData("Spear 1"),
-                    new ContextMenuEntryData("Rock"),
-                    new ContextMenuEntryData("Wizard 1"),
-                    new ContextMenuEntryData("Sell: 10$")
-                }
-            )
-        );
+        if (grid.TryGetValue(index.x, index.y, out Tower tower))
+        {
+            contextMenuRequestChannel.Raise(
+                new ContextMenuRequest(
+                    index,
+                    pointerScreenPosition,
+                    tower.GetContextMenuEntries()
+                )
+            );
+        }
+        else
+        {
+            Debug.LogWarning($"Unable to get tower by coordinates ({index.x}, {index.y})");
+            return;
+        }
     }
 
+    private void HandleContextMenuResponce(ContextMenuResponce responce)
+    {
+        if (grid.TryGetValue(responce.Index.x, responce.Index.y, out Tower tower))
+        {
+            tower.HandleResponce(responce);
+        }
+        else
+        {
+            Debug.LogWarning($"Unable to get tower by coordinates ({responce.Index.x}, {responce.Index.y})");
+            return;
+        }
+    }
+
+#region Tower Spawning
+    private void SpawnTower(int x, int y, Tower prefab)
+    {
+        Tower tower = Instantiate(prefab, GetCellCenter(x,y), Quaternion.identity);
+        tower.Setup(this, new Vector2Int(x, y));
+        grid.SetValue(x, y, tower);
+    }
+
+    private void FillWithNull()
+    {
+        Vector2[] towerPositions = clickGrid.GetAllTileCenters().ToArray();
+        for (int i = 0; i < towerPositions.Length; i++)
+        {
+            if (grid.TryGetIndex(towerPositions[i], out Vector2Int index))
+            {
+                SpawnTower(index.x, index.y, nullTowerPrefab);
+            }
+            else
+            {
+                Debug.LogError("Error with getting tower index to place NullTower");
+            }
+        }
+    }
+
+    public void PlaceTower(int x, int y, Tower prefab)
+    {
+        if (grid.TryGetValue(x, y, out Tower oldTower))
+        {
+            Destroy(oldTower.gameObject);
+            Debug.Log("Old tower destroyed");
+        }
+        SpawnTower(x, y, prefab);
+        Debug.Log("New tower spawned");
+    }
+#endregion
+
+#region Helpers
     private Vector2 GetCellCenter(int x, int y)
     {
-        if (grid.TryGetValue(x, y, out bool _))
+        if (grid.TryGetValue(x, y, out Tower _))
         {
             Vector2 cellOrigin = gridOrigin + new Vector2(x * gridCellSize.x, y * gridCellSize.y);
             Vector2 cellCenter = cellOrigin + gridCellSize * 0.5f;
@@ -64,7 +120,9 @@ public class TowerGrid : MonoBehaviour
 
         return Vector2.zero;
     }
+#endregion
 
+#region Debug
     private void OnDrawGizmos()
     {
         DrawGrid();
@@ -88,4 +146,5 @@ public class TowerGrid : MonoBehaviour
         Gizmos.DrawLine(new Vector2(maxXPosition, gridOrigin.y), new Vector2(maxXPosition, maxYPosition));
         Gizmos.DrawLine(new Vector2(gridOrigin.x, maxYPosition), new Vector2(maxXPosition, maxYPosition));
     }
+#endregion
 }

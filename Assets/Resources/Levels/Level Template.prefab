@@ -105,6 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d093d438b7a2439fa86797590d62995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickGrid
+  tilemap: {fileID: 8679818135487204168}
 --- !u!1 &4604259996448793242
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,10 +151,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TowerGrid
   contextMenuRequestChannel: {fileID: 11400000, guid: 1b93b589a98f74dea86c0f9131d77539, type: 2}
+  contextMenuResponceChannel: {fileID: 11400000, guid: 5cec44e85c96445eeab5c1aa0772ff1a, type: 2}
   gridSize: {x: 21, y: 14}
   gridOrigin: {x: -9, y: -7}
   gridCellSize: {x: 1, y: 1}
   clickGrid: {fileID: 1138659442637358624}
+  nullTowerPrefab: {fileID: 6857456188728996988, guid: 311cfdc8497c04569a8402c06013e89b, type: 3}
 --- !u!1 &5676013031663208230
 GameObject:
   m_ObjectHideFlags: 0

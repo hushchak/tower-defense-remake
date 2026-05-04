@@ -88,7 +88,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 8843656720760608174}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -217,3 +217,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ContextMenuEntry
   text: {fileID: 8843656720760608174}
+  button: {fileID: 7297957802191940181}

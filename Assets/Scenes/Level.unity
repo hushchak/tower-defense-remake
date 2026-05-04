@@ -589,6 +589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ContextMenuController
   requestChannel: {fileID: 11400000, guid: 1b93b589a98f74dea86c0f9131d77539, type: 2}
+  responceChannel: {fileID: 11400000, guid: 5cec44e85c96445eeab5c1aa0772ff1a, type: 2}
   canvasRectTransform: {fileID: 1023559784}
   pivotRectTransform: {fileID: 1080406438}
   contextMenuRectTransform: {fileID: 422461638}

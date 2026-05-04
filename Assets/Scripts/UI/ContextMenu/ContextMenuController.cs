@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -5,6 +6,7 @@ using UnityEngine.UI;
 public class ContextMenuController : MonoBehaviour
 {
     [SerializeField] private EventChannelContextMenuRequest requestChannel;
+    [SerializeField] private EventChannelContextMenuResponce responceChannel;
     [Space]
     [SerializeField] private RectTransform canvasRectTransform;
     [SerializeField] private RectTransform pivotRectTransform;
@@ -31,7 +33,7 @@ public class ContextMenuController : MonoBehaviour
     {
         if (contextMenuEnabled)
         {
-            ClearEntries();
+            ResetContextMenu();
         }
 
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
@@ -42,13 +44,13 @@ public class ContextMenuController : MonoBehaviour
         );
 
         pivotRectTransform.anchoredPosition = localPoint;
-        SpawnEntries(request.Entries);
+        SpawnEntries(request.Entries, request);
+        contextMenu.SetActive(true);
         LayoutRebuilder.ForceRebuildLayoutImmediate(contextMenuRectTransform);
         SetContextMenuAlign(localPoint);
 
         autoHide.Hide += HideContextMenu;
 
-        contextMenu.SetActive(true);
         contextMenuEnabled = true;
     }
 
@@ -68,25 +70,38 @@ public class ContextMenuController : MonoBehaviour
 
     private void HideContextMenu()
     {
-        autoHide.Hide -= HideContextMenu;
-
         contextMenu.SetActive(false);
-        ClearEntries();
+        ResetContextMenu();
         contextMenuEnabled = false;
     }
 
-    private void SpawnEntries(ContextMenuEntryData[] entriesData)
+    private void ResetContextMenu()
+    {
+        autoHide.Hide -= HideContextMenu;
+        ClearEntries();
+    }
+
+    private void SpawnEntries(ContextMenuEntryData[] entriesData, ContextMenuRequest request)
     {
         for (int i = 0; i < entriesData.Length; i++)
         {
-            AddEntry(entriesData[i].Name);
+            AddEntry(entriesData[i], request);
         }
     }
 
-    private void AddEntry(string name)
+    private void AddEntry(ContextMenuEntryData data, ContextMenuRequest request)
     {
         ContextMenuEntry entry = Instantiate(entryPrefab, contextMenu.transform);
-        entry.Setup(name);
+        Action entryAction = () => responceChannel.Raise(
+            new ContextMenuResponce(
+                request.Tile,
+                data.Action.TowerPrefab,
+                data.Action.MoneyDifference
+            )
+        );
+        entryAction += HideContextMenu;
+
+        entry.Setup(data.Name, entryAction);
         currentEntries.Add(entry);
     }
 
