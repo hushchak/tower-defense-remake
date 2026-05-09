@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
     public event Action OnDeactivated;
 
     [SerializeField] private EnemyData data;
+    [SerializeField] private EnemyHealth health;
 
     private EnemyPath path;
     private int currentPoint;
@@ -18,6 +19,12 @@ public class Enemy : MonoBehaviour
     private void OnEnable()
     {
         currentPoint = 0;
+        health.OnDeath += Die;
+    }
+
+    private void OnDisable()
+    {
+        health.OnDeath -= Die;
     }
 
     private void Update()
