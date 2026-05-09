@@ -101,10 +101,8 @@ public class TowerGrid : MonoBehaviour
         if (grid.TryGetValue(x, y, out Tower oldTower))
         {
             Destroy(oldTower.gameObject);
-            Debug.Log("Old tower destroyed");
         }
         SpawnTower(x, y, prefab);
-        Debug.Log("New tower spawned");
     }
 #endregion
 

@@ -27,7 +27,15 @@ public abstract class Tower : MonoBehaviour
 
     public void HandleResponce(ContextMenuResponce responce)
     {
-        // TODO: Check if player has enough money
+        if (responce.MoneyDifference > 0)
+        {
+            PlayerMoney.Instance.AddMoney(Mathf.Abs(responce.MoneyDifference));
+        }
+        else if (!PlayerMoney.Instance.TryDecreaseMoney(Mathf.Abs(responce.MoneyDifference)))
+        {
+            Debug.Log("Not enough money to place/upgrade tower");
+            return;
+        }
 
         Debug.Log("Tower Hadling");
         ParentGrid.PlaceTower(Index.x, Index.y, responce.TowerPrefab);

@@ -61,13 +61,13 @@ public class Enemy : MonoBehaviour
     {
         OnDeactivated?.Invoke();
         gameObject.SetActive(false);
-        //PlayerHealth.Instance.TakeDamage(data.Damage);
+        PlayerHealth.Instance.TakeDamage(data.Damage);
     }
 
     private void Die()
     {
         OnDeactivated?.Invoke();
         gameObject.SetActive(false);
-        //PlayerMoney.Instance.AddMoney(data.MoneyValue);
+        PlayerMoney.Instance.AddMoney(data.MoneyValue);
     }
 }

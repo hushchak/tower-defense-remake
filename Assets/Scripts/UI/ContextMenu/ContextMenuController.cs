@@ -59,8 +59,6 @@ public class ContextMenuController : MonoBehaviour
         Vector2 menuSize = contextMenuRectTransform.rect.size;
         Vector2 canvasBorderPoint = canvasRectTransform.rect.size * new Vector2(0.5f, -0.5f);
 
-        Debug.Log($"{canvasBorderPoint}, {menuSize}, {menuPoint}");
-
         Vector2 newPivot;
         newPivot.x = menuPoint.x + menuSize.x > canvasBorderPoint.x ? 1 : 0;
         newPivot.y = menuPoint.y - menuSize.y < canvasBorderPoint.y ? 0 : 1;

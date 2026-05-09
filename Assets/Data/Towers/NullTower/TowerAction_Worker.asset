@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TowerAction
   <EntryName>k__BackingField: 'Worker: 10$'
   <TowerPrefab>k__BackingField: {fileID: 6857456188728996988, guid: ad2faad162c2641c58650158a28312ed, type: 3}
-  <MoneyDifference>k__BackingField: 10
+  <MoneyDifference>k__BackingField: -10

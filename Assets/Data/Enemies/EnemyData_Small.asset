@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: EnemyData_Small
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   <Speed>k__BackingField: 5
+  <HealthPoints>k__BackingField: 50
+  <Damage>k__BackingField: 1
+  <MoneyValue>k__BackingField: 1
