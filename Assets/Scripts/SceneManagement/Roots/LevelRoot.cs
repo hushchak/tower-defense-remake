@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class LevelRoot : SceneRoot
 {
+    [SerializeField] private EventChannel LevelLoadedChannel;
+
     public override void Initialize(SceneArgs args)
     {
         if (args is not LevelArgs)
@@ -14,6 +16,7 @@ public class LevelRoot : SceneRoot
 
         Debug.Log($"Loading level: {levelArgs.LevelName}");
         Level level = Instantiate(Resources.Load<Level>($"Levels/{levelArgs.LevelName}"));
+        LevelLoadedChannel.Raise();
         Debug.Log($"Level {levelArgs.LevelName} is loaded");
 
         // TODO: Intialization of level prefab

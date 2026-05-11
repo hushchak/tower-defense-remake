@@ -12,6 +12,7 @@ public class TowerGrid : MonoBehaviour
     [Space]
     [SerializeField] private ClickGrid clickGrid;
     [SerializeField] private NullTower nullTowerPrefab;
+    [SerializeField] private Transform towerParent;
 
     private Grid<Tower> grid;
 
@@ -76,6 +77,7 @@ public class TowerGrid : MonoBehaviour
     private void SpawnTower(int x, int y, Tower prefab)
     {
         Tower tower = Instantiate(prefab, GetCellCenter(x,y), Quaternion.identity);
+        tower.transform.parent = towerParent;
         tower.Setup(this, new Vector2Int(x, y));
         grid.SetValue(x, y, tower);
     }

@@ -7,6 +7,8 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] private EnemyPath Path_1;
     [SerializeField] private EnemyPath Path_2;
     [SerializeField] private EnemyPath Path_3;
+    [Space]
+    [SerializeField] private Transform enemyParent;
 
     private int runningPaths = 0;
 
@@ -53,6 +55,7 @@ public class WaveSpawner : MonoBehaviour
     private Enemy SpawnEnemy(EnemyPath path, EnemyWaveData data)
     {
         Enemy enemy = Instantiate(data.Prefab, path.StartPoint.position, Quaternion.identity);
+        enemy.transform.parent = enemyParent;
         enemy.Setup(path);
         return enemy;
     }

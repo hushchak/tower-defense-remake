@@ -9,6 +9,7 @@ public class PlayerMoney : Singleton<PlayerMoney>
     //[SerializeField] private Sound moneyAddSound;
 
     private int money;
+    public int Money => money;
 
     protected override void Awake()
     {
@@ -37,10 +38,5 @@ public class PlayerMoney : Singleton<PlayerMoney>
     {
         money = Mathf.Clamp(money - amount, 0, int.MaxValue);
         moneyChangedChannel.Raise(money);
-    }
-
-    public int GetMoney()
-    {
-        return money;
     }
 }

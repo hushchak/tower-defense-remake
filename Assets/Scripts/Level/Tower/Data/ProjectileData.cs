@@ -14,7 +14,7 @@ public class ProjectileData
     public bool DontStopAfterEnemyHit { get; private set; }
 
     public ProjectileData(Sprite sprite, float radius, int damage, DamageType damageType, float speed, float distance,
-        Vector2 direction, LayerMask enemyLayer, float slownessCoefficient, bool stopAfterEnemyHit)
+        Vector2 direction, LayerMask enemyLayer, float slownessCoefficient, bool dontStopAfterEnemyHit)
     {
         Sprite = sprite;
         Radius = radius;
@@ -25,6 +25,6 @@ public class ProjectileData
         Direction = direction;
         EnemyLayer = enemyLayer;
         SlownessCoefficient = slownessCoefficient;
-        DontStopAfterEnemyHit = stopAfterEnemyHit;
+        DontStopAfterEnemyHit = dontStopAfterEnemyHit;
     }
 }

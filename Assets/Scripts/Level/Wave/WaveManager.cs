@@ -3,7 +3,10 @@ using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
+    [SerializeField] private EventChannel waveTriggerChannel;
     [SerializeField] private EventChannel waveStartChannel;
+    [SerializeField] private EventChannel waveEndChannel;
+    [Space]
     [SerializeField] private WaveSpawner waveSpawner;
     [Space]
     [SerializeField] private WavesData data;
@@ -13,12 +16,12 @@ public class WaveManager : MonoBehaviour
 
     private void OnEnable()
     {
-        waveStartChannel.Subscribe(TryStartWave);
+        waveTriggerChannel.Subscribe(TryStartWave);
     }
 
     private void OnDisable()
     {
-        waveStartChannel.Unsubscribe(TryStartWave);
+        waveTriggerChannel.Unsubscribe(TryStartWave);
     }
 
     private async void TryStartWave()
@@ -28,11 +31,13 @@ public class WaveManager : MonoBehaviour
             return;
 
         waveInProgress = true;
+        waveStartChannel.Raise();
 
         await HandleWave();
 
         currentWaveIndex++;
         waveInProgress = false;
+        waveEndChannel.Raise();
     }
 
     private async Awaitable HandleWave()

@@ -8,6 +8,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
     [SerializeField] private int maxHealth;
 
     private int health;
+    public int Health => health;
 
     protected override void Awake()
     {
