@@ -685,6 +685,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plains
       objectReference: {fileID: 0}
+    - target: {fileID: 2029687899706953970, guid: b51ef585e6ed84e469720cba98e4f384, type: 3}
+      propertyPath: startMoney
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 3646260996857583013, guid: b51ef585e6ed84e469720cba98e4f384, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -8877,7 +8881,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6739569427688664127, guid: b51ef585e6ed84e469720cba98e4f384, type: 3}
-      insertIndex: 1
+      insertIndex: 2
       addedObject: {fileID: 3807737074618261866}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1273552762482168347, guid: b51ef585e6ed84e469720cba98e4f384, type: 3}

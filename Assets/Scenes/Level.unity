@@ -164,7 +164,6 @@ Transform:
   - {fileID: 239808708}
   - {fileID: 103538699}
   - {fileID: 1023559784}
-  - {fileID: 375201332}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &103538698
@@ -342,68 +341,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2962114924620495276, guid: c20b30514ff544a0d9f645e638e40c6b, type: 3}
   m_PrefabInstance: {fileID: 239808707}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &375201331
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 375201332}
-  - component: {fileID: 375201334}
-  - component: {fileID: 375201333}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &375201332
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375201331}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 66036053}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &375201333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375201331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 697aac0f411dc47a8837a69cb4126389, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMoney
-  moneyChangedChannel: {fileID: 11400000, guid: 0db95643da3654d97a3eda6d9f4210b6, type: 2}
-  startMoney: 12
---- !u!114 &375201334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375201331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cfec675d78db48e1b36da2f50dfc9c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  deathEventChannel: {fileID: 11400000, guid: 0f5fca87a6aa145b993151dae1398092, type: 2}
-  healthChangedChannel: {fileID: 11400000, guid: 3d3adc2077e15429eb646e2003aeb720, type: 2}
-  maxHealth: 20
 --- !u!1 &422461637
 GameObject:
   m_ObjectHideFlags: 0

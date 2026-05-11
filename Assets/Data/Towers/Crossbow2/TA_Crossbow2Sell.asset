@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f3127c4828ef444f80da7cf44a2e898, type: 3}
+  m_Name: TA_Crossbow2Sell
+  m_EditorClassIdentifier: Assembly-CSharp::TowerAction
+  <EntryName>k__BackingField: 'Sell: +20$'
+  <TowerPrefab>k__BackingField: {fileID: 6857456188728996988, guid: 311cfdc8497c04569a8402c06013e89b, type: 3}
+  <MoneyDifference>k__BackingField: 20

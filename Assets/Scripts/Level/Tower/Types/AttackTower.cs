@@ -20,17 +20,12 @@ public class AttackTower : Tower
         {
             nextAttackTime = Time.time + Data.AttackRate;
         }
-
-        Debug.Log("Updating tower");
     }
 
     private bool TryAttack()
     {
-        Debug.Log("Trying to attack");
         Collider2D[] potentialTargets = Physics2D.OverlapCircleAll(transform.position, Data.AttackRange, Data.EnemyLayer);
-        Debug.Log($"{potentialTargets.Length}");
         GameObject[] targets = GetTargets(potentialTargets);
-        Debug.Log($"{targets.Length}");
 
         if (targets.Length == 0)
             return false;
@@ -40,13 +35,13 @@ public class AttackTower : Tower
                 Data.ProjectileSprite,
                 Data.ProjectileRadius,
                 Data.Damage,
+                Data.DamageType,
                 Data.ProjectileSpeed,
                 Data.AttackRange,
                 (closestTarget.transform.position - this.transform.position).normalized,
                 Data.EnemyLayer,
                 Data.SlownessCoefficient,
-                Data.AttackOnlyGround,
-                Data.StopAfterEnemyHit
+                Data.DontStopAfterEnemyHit
             )
         );
         return true;

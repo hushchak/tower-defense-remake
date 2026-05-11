@@ -37,7 +37,6 @@ public abstract class Tower : MonoBehaviour
             return;
         }
 
-        Debug.Log("Tower Hadling");
         ParentGrid.PlaceTower(Index.x, Index.y, responce.TowerPrefab);
     }
 }

@@ -15,12 +15,12 @@ public class Projectile : MonoBehaviour
         spriteRenderer.sprite = data.Sprite;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         //if (SessionStateManager.Instance.IsPaused)
         //    return;
 
-        MoveToTarget(Time.deltaTime);
+        MoveToTarget(Time.fixedDeltaTime);
         CheckEnemies();
         if (Vector2.Distance(transform.position, targetPosition) < 0.1f)
         {
@@ -48,6 +48,13 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    private void TargetReached() => gameObject.SetActive(false);
+    private void TargetReached()
+    {
+        if (data.DontStopAfterEnemyHit)
+            return;
+
+        gameObject.SetActive(false);
+    }
+
     private void Dissolve() => gameObject.SetActive(false);
 }

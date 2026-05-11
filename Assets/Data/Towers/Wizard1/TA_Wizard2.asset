@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f3127c4828ef444f80da7cf44a2e898, type: 3}
-  m_Name: TowerAction_Worker
+  m_Name: TA_Wizard2
   m_EditorClassIdentifier: Assembly-CSharp::TowerAction
-  <EntryName>k__BackingField: 'Worker: 10$'
-  <TowerPrefab>k__BackingField: {fileID: 7998025849100878705, guid: ad2faad162c2641c58650158a28312ed, type: 3}
-  <MoneyDifference>k__BackingField: -10
+  <EntryName>k__BackingField: 'Wizard 2: 30$'
+  <TowerPrefab>k__BackingField: {fileID: 7998025849100878705, guid: 0c27a16217f88404bb38a731a61da494, type: 3}
+  <MoneyDifference>k__BackingField: -30

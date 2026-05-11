@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 809c2296acbb4432ba0a7d211b14531b, type: 3}
   m_Name: TowerData_Worker
   m_EditorClassIdentifier: Assembly-CSharp::TowerData
-  <ProjectileSprite>k__BackingField: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  <ProjectileSprite>k__BackingField: {fileID: 8618663976898325987, guid: 864e17c5cc6184ff6a75d89b2e6860b0, type: 3}
   <ProjectileRadius>k__BackingField: 0.2
-  <ProjectileSpeed>k__BackingField: 5
+  <ProjectileSpeed>k__BackingField: 15
   <ProjectilePrefab>k__BackingField: {fileID: 4534730106936269906, guid: 1ee44742a73b14ad7b9787d52557e056, type: 3}
-  <Damage>k__BackingField: 10
+  <Damage>k__BackingField: 20
+  <DamageType>k__BackingField: 0
   <AttackRate>k__BackingField: 0.833
   <AttackRange>k__BackingField: 2
   <EnemyLayer>k__BackingField:
@@ -26,8 +27,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   <SlownessCoefficient>k__BackingField: 0
-  <AttackOnlyGround>k__BackingField: 0
-  <StopAfterEnemyHit>k__BackingField: 0
+  <DontStopAfterEnemyHit>k__BackingField: 0
   <Actions>k__BackingField:
-  - {fileID: 11400000, guid: 3d150f16a274d4eb58eb24a1997f7fb3, type: 2}
-  - {fileID: 11400000, guid: 6e60ee2848ade41c2a1c6c4910326429, type: 2}
+  - {fileID: 11400000, guid: bfed2cb96df604f4dad2b196408dba41, type: 2}
+  - {fileID: 11400000, guid: 0c171e814509944058fc0d92b1e78788, type: 2}
+  - {fileID: 11400000, guid: d8f43eb1c91eb4140a2e9c4c249ba5fa, type: 2}
+  - {fileID: 11400000, guid: 5ed3be888a7db491a85b1519839c5460, type: 2}

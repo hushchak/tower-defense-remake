@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f3127c4828ef444f80da7cf44a2e898, type: 3}
-  m_Name: TowerAction_Chicken
+  m_Name: TA_Wizard1Sell
   m_EditorClassIdentifier: Assembly-CSharp::TowerAction
-  <EntryName>k__BackingField: 'Chicken: 10$'
-  <TowerPrefab>k__BackingField: {fileID: 6857456188728996988, guid: 8a98b78e22fb846a88275aba2c76d820, type: 3}
-  <MoneyDifference>k__BackingField: -10
+  <EntryName>k__BackingField: 'Sell: +10$'
+  <TowerPrefab>k__BackingField: {fileID: 6857456188728996988, guid: 311cfdc8497c04569a8402c06013e89b, type: 3}
+  <MoneyDifference>k__BackingField: 10
