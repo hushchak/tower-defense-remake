@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6513812240879938956}
   - component: {fileID: 3952056169744226232}
+  - component: {fileID: 4549744625557661207}
   - component: {fileID: -3094424222814661719}
+  - component: {fileID: 8421028786568206983}
   - component: {fileID: -3378304935821844607}
   m_Layer: 6
   m_Name: Enemy (Small)
@@ -49,6 +51,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   data: {fileID: 11400000, guid: 48f451f83fb4542f2a1de668f2c08e31, type: 2}
   health: {fileID: -3094424222814661719}
+  movement: {fileID: 4549744625557661207}
+  effects: {fileID: 8421028786568206983}
+--- !u!114 &4549744625557661207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5881616599804751786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e4c6db51d73a46938511908e47df2bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
 --- !u!114 &-3094424222814661719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,7 +77,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1877f8e36bca74bf5b7f88fdf7707da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  data: {fileID: 11400000, guid: 48f451f83fb4542f2a1de668f2c08e31, type: 2}
+--- !u!114 &8421028786568206983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5881616599804751786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5088bc3f47f754fd5a67edce270d5cd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyEffects
 --- !u!58 &-3378304935821844607
 CircleCollider2D:
   m_ObjectHideFlags: 0

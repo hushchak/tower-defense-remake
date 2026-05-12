@@ -15,7 +15,7 @@ MonoBehaviour:
   <Waves>k__BackingField:
   - <Actions_1>k__BackingField:
     - <Enemy>k__BackingField: {fileID: 11400000, guid: fc3a4fd12bd5d43a9802dda3928badd2, type: 2}
-      <Number>k__BackingField: 3
+      <Number>k__BackingField: 10
       <SpawnRate>k__BackingField: 1
       <WaitAfter>k__BackingField: 3
     - <Enemy>k__BackingField: {fileID: 11400000, guid: fc3a4fd12bd5d43a9802dda3928badd2, type: 2}

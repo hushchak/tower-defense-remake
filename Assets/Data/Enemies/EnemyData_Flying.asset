@@ -17,5 +17,5 @@ MonoBehaviour:
   <Damage>k__BackingField: 3
   <MoneyValue>k__BackingField: 1
   <HealthPoints>k__BackingField: 80
-  <DefencePercent>k__BackingField: 60
-  <FireDefencePercent>k__BackingField: 30
+  <DefenceCoefficient>k__BackingField: 0.6
+  <FireDefenceCoefficient>k__BackingField: 0.3

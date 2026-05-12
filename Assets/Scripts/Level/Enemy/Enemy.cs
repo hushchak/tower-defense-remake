@@ -7,24 +7,25 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private EnemyData data;
     [SerializeField] private EnemyHealth health;
-
-    private EnemyPath path;
-    private int currentPoint;
+    [SerializeField] private EnemyMovement movement;
+    [SerializeField] private EnemyEffects effects;
 
     public void Setup(EnemyPath path)
     {
-        this.path = path;
+        movement.Setup(data, effects, path);
+        health.Setup(data, effects);
     }
 
     private void OnEnable()
     {
-        currentPoint = 0;
         health.OnDeath += Die;
+        movement.OnPathEndReached += PathEndReached;
     }
 
     private void OnDisable()
     {
         health.OnDeath -= Die;
+        movement.OnPathEndReached -= PathEndReached;
     }
 
     private void Update()
@@ -32,29 +33,7 @@ public class Enemy : MonoBehaviour
         //if (SessionStateManager.Instance.IsPaused)
         //    return;
 
-        HandleMovement(Time.deltaTime);
-    }
-
-    private void HandleMovement(float delta)
-    {
-        if (currentPoint == path.PointsCount)
-            return;
-
-        transform.position = Vector3.MoveTowards(
-            transform.position,
-            path.GetPoint(currentPoint).position,
-            data.Speed * delta
-        );
-
-        if (Vector2.Distance(transform.position, path.GetPoint(currentPoint).position) < 0.1f)
-        {
-            transform.position = path.GetPoint(currentPoint).position;
-            currentPoint++;
-            if (currentPoint >= path.PointsCount)
-            {
-                PathEndReached();
-            }
-        }
+        movement.HandleMovement(Time.deltaTime);
     }
 
     private void PathEndReached()

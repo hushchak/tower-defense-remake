@@ -26,7 +26,9 @@ MonoBehaviour:
   <ObstacleLayer>k__BackingField:
     serializedVersion: 2
     m_Bits: 128
-  <SlownessCoefficient>k__BackingField: 50
+  <SlownessData>k__BackingField:
+    <Coefficient>k__BackingField: 0.5
+    <Duration>k__BackingField: 3
   <DontStopAfterEnemyHit>k__BackingField: 0
   <Actions>k__BackingField:
   - {fileID: 11400000, guid: 18ecc113f42924227b80efc8b25630cc, type: 2}

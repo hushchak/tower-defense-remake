@@ -10,6 +10,6 @@ public class EnemyData : ScriptableObject
     [field: SerializeField] public int MoneyValue { get; private set; } = 1;
     [field: Space]
     [field: SerializeField] public int HealthPoints { get; private set; } = 50;
-    [field: SerializeField, Range(0f, 100f)] public int DefencePercent { get; private set; } = 0;
-    [field: SerializeField, Range(0f, 100f)] public int FireDefencePercent { get; private set; } = 0;
+    [field: SerializeField, Range(0f, 1f)] public float DefenceCoefficient { get; private set; } = 0;
+    [field: SerializeField, Range(0f, 1f)] public float FireDefenceCoefficient { get; private set; } = 0;
 }

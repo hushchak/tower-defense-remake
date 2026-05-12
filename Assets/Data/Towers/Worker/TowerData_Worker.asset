@@ -16,7 +16,7 @@ MonoBehaviour:
   <ProjectileRadius>k__BackingField: 0.2
   <ProjectileSpeed>k__BackingField: 15
   <ProjectilePrefab>k__BackingField: {fileID: 4534730106936269906, guid: 1ee44742a73b14ad7b9787d52557e056, type: 3}
-  <Damage>k__BackingField: 20
+  <Damage>k__BackingField: 10
   <DamageType>k__BackingField: 0
   <AttackRate>k__BackingField: 0.833
   <AttackRange>k__BackingField: 2
@@ -26,7 +26,9 @@ MonoBehaviour:
   <ObstacleLayer>k__BackingField:
     serializedVersion: 2
     m_Bits: 128
-  <SlownessCoefficient>k__BackingField: 0
+  <SlownessData>k__BackingField:
+    <Coefficient>k__BackingField: 0
+    <Duration>k__BackingField: 0
   <DontStopAfterEnemyHit>k__BackingField: 0
   <Actions>k__BackingField:
   - {fileID: 11400000, guid: bfed2cb96df604f4dad2b196408dba41, type: 2}

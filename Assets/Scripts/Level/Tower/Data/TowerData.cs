@@ -15,7 +15,7 @@ public class TowerData : ScriptableObject
     [field: SerializeField] public LayerMask EnemyLayer { get; private set; }
     [field: SerializeField] public LayerMask ObstacleLayer { get; private set; }
     [field: Space]
-    [field: SerializeField, Range(0f, 100f)] public float SlownessCoefficient { get; private set; } = 0;
+    [field: SerializeField] public SlownessData SlownessData { get; private set; }
     [field: Space]
     [field: SerializeField] public bool DontStopAfterEnemyHit { get; private set; } = false;
     [field: Space]

@@ -10,11 +10,11 @@ public class ProjectileData
     public float Distance { get; private set; }
     public Vector2 Direction { get; private set; }
     public LayerMask EnemyLayer { get; private set; }
-    public float SlownessCoefficient { get; private set; }
+    public SlownessData SlownessData { get; private set; }
     public bool DontStopAfterEnemyHit { get; private set; }
 
     public ProjectileData(Sprite sprite, float radius, int damage, DamageType damageType, float speed, float distance,
-        Vector2 direction, LayerMask enemyLayer, float slownessCoefficient, bool dontStopAfterEnemyHit)
+        Vector2 direction, LayerMask enemyLayer, SlownessData slownessData, bool dontStopAfterEnemyHit)
     {
         Sprite = sprite;
         Radius = radius;
@@ -24,7 +24,7 @@ public class ProjectileData
         Distance = distance;
         Direction = direction;
         EnemyLayer = enemyLayer;
-        SlownessCoefficient = slownessCoefficient;
+        SlownessData = slownessData;
         DontStopAfterEnemyHit = dontStopAfterEnemyHit;
     }
 }

@@ -40,7 +40,7 @@ public class AttackTower : Tower
                 Data.AttackRange,
                 (closestTarget.transform.position - this.transform.position).normalized,
                 Data.EnemyLayer,
-                Data.SlownessCoefficient,
+                Data.SlownessData,
                 Data.DontStopAfterEnemyHit
             )
         );

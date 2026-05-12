@@ -42,7 +42,10 @@ public class Projectile : MonoBehaviour
         {
             if (enemy.gameObject.TryGetComponent(out IDamageable damageable))
             {
-                damageable.ApplyDamage(data.Damage);
+                if (!damageable.CanBeDamaged(data.DamageType))
+                    return;
+
+                damageable.ApplyDamage(data.Damage, data.DamageType, data.SlownessData);
                 TargetReached();
             }
         }
