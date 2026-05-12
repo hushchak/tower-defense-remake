@@ -8,8 +8,9 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] private EnemyPath Path_2;
     [SerializeField] private EnemyPath Path_3;
     [Space]
-    [SerializeField] private Transform enemyParent;
+    [SerializeField] private Transform poolsParent;
 
+    private Dictionary<GameObject, ObjectPool> pools = new();
     private int runningPaths = 0;
 
     public async Awaitable SpawnWave(WaveData data)
@@ -40,6 +41,7 @@ public class WaveSpawner : MonoBehaviour
                 Enemy enemy = SpawnEnemy(path, actions[actionIndex].Enemy);
                 enemy.OnDeactivated += () => aliveEnemies.Remove(enemy);
                 aliveEnemies.Add(enemy);
+                enemy.gameObject.SetActive(true);
 
                 await Awaitable.WaitForSecondsAsync(actions[actionIndex].SpawnRate);
             }
@@ -54,9 +56,26 @@ public class WaveSpawner : MonoBehaviour
 
     private Enemy SpawnEnemy(EnemyPath path, EnemyWaveData data)
     {
-        Enemy enemy = Instantiate(data.Prefab, path.StartPoint.position, Quaternion.identity);
-        enemy.transform.parent = enemyParent;
+        Enemy enemy = GetPool(data.Prefab.gameObject).GetObject().GetComponent<Enemy>();
+
+        enemy.transform.position = path.StartPoint.position;
         enemy.Setup(path);
+
         return enemy;
+    }
+
+    private ObjectPool GetPool(GameObject prefab)
+    {
+        if (pools.TryGetValue(prefab, out ObjectPool pool))
+        {
+            return pool;
+        }
+
+        Transform poolParent = new GameObject("Pool").transform;
+        poolParent.parent = poolsParent;
+
+        ObjectPool newPool = new ObjectPool(prefab, poolParent, 1);
+        pools.TryAdd(prefab, newPool);
+        return newPool;
     }
 }

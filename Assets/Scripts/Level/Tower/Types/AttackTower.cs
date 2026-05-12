@@ -99,7 +99,12 @@ public class AttackTower : Tower
 
     private void SpawnProjectile(ProjectileData data)
     {
-        Projectile projectile = Instantiate(Data.ProjectilePrefab, transform.position, Quaternion.identity);
+        Projectile projectile = ProjectileManager.Instance.GetPool(Data.ProjectilePrefab.gameObject)
+            .GetObject()
+            .GetComponent<Projectile>();
+
+        projectile.transform.position = this.transform.position;
         projectile.Setup(data);
+        projectile.gameObject.SetActive(true);
     }
 }

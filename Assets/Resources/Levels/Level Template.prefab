@@ -66,7 +66,7 @@ MonoBehaviour:
   Path_1: {fileID: 0}
   Path_2: {fileID: 0}
   Path_3: {fileID: 0}
-  enemyParent: {fileID: 5215894784014319564}
+  poolsParent: {fileID: 5215894784014319564}
 --- !u!1 &1595461668808735204
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,6 +115,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93eeb8a518e624ae0930a87daafc28e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Level
+--- !u!1 &3206303648097431750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 507775512053337856}
+  - component: {fileID: 8292888510654711496}
+  m_Layer: 0
+  m_Name: Projectiles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &507775512053337856
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3206303648097431750}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6201916628614407895}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8292888510654711496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3206303648097431750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f9549e5c2194c5aa0ae44ec8279e5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectileManager
+  poolsParent: {fileID: 507775512053337856}
 --- !u!1 &3362484776937102877
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,6 +282,7 @@ Transform:
   m_Children:
   - {fileID: 285534922728072360}
   - {fileID: 434390646914354065}
+  - {fileID: 507775512053337856}
   m_Father: {fileID: 6739569427688664127}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &777108639534964406
@@ -376,7 +422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5215894784014319564}
   m_Layer: 0
-  m_Name: Enemies
+  m_Name: Pools
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
