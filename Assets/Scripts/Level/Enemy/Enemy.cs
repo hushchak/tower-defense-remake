@@ -30,8 +30,8 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        //if (SessionStateManager.Instance.IsPaused)
-        //    return;
+        if (PauseManager.Instance.IsPaused)
+            return;
 
         movement.HandleMovement(Time.deltaTime);
     }

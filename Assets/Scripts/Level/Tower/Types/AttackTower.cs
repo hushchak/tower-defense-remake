@@ -8,6 +8,9 @@ public class AttackTower : Tower
 
     private void Update()
     {
+        if (PauseManager.Instance.IsPaused)
+            return;
+
         HandleAttack();
     }
 

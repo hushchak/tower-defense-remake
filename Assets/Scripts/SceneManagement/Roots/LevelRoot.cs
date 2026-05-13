@@ -1,8 +1,10 @@
+using System;
 using UnityEngine;
 
 public class LevelRoot : SceneRoot
 {
     [SerializeField] private EventChannel LevelLoadedChannel;
+    [SerializeField] private EventChannel LevelExitInitiationChannel;
 
     public override void Initialize(SceneArgs args)
     {
@@ -19,6 +21,16 @@ public class LevelRoot : SceneRoot
         LevelLoadedChannel.Raise();
         Debug.Log($"Level {levelArgs.LevelName} is loaded");
 
-        // TODO: Intialization of level prefab
+        LevelExitInitiationChannel.Subscribe(HandleLevelExit);
+    }
+
+    private void OnDestroy()
+    {
+        LevelExitInitiationChannel.Unsubscribe(HandleLevelExit);
+    }
+
+    private async void HandleLevelExit()
+    {
+        await SceneLoader.LoadScene(SceneList.Slots.Main, SceneList.Names.LevelMenu, SceneArgs.Empty, true);
     }
 }

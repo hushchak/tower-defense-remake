@@ -7,6 +7,7 @@ public class ContextMenuController : MonoBehaviour
 {
     [SerializeField] private EventChannelContextMenuRequest requestChannel;
     [SerializeField] private EventChannelContextMenuResponce responceChannel;
+    [SerializeField] private EventChannelBool pauseChannel;
     [Space]
     [SerializeField] private RectTransform canvasRectTransform;
     [SerializeField] private RectTransform pivotRectTransform;
@@ -22,11 +23,13 @@ public class ContextMenuController : MonoBehaviour
     private void OnEnable()
     {
         requestChannel.Subscribe(HandleRequest);
+        pauseChannel.Subscribe(HandlePause);
     }
 
     private void OnDisable()
     {
         requestChannel.Unsubscribe(HandleRequest);
+        pauseChannel.Unsubscribe(HandlePause);
     }
 
     private void HandleRequest(ContextMenuRequest request)
@@ -110,5 +113,13 @@ public class ContextMenuController : MonoBehaviour
             Destroy(currentEntries[i].gameObject);
         }
         currentEntries.Clear();
+    }
+
+    private void HandlePause(bool isPaused)
+    {
+        if (isPaused)
+        {
+            HideContextMenu();
+        }
     }
 }

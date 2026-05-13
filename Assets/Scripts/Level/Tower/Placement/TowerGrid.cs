@@ -36,6 +36,9 @@ public class TowerGrid : MonoBehaviour
 
     private void HandleClick(Vector2 pointerScreenPosition)
     {
+        if (PauseManager.Instance.IsPaused)
+            return;
+
         Vector2 pointerWorldPosition = Camera.main.ScreenToWorldPoint(pointerScreenPosition);
         if (!grid.TryGetIndex(pointerWorldPosition, out Vector2Int index))
         {
