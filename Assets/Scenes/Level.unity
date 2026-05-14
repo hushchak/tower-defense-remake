@@ -206,6 +206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 66036053}
   - component: {fileID: 66036052}
+  - component: {fileID: 66036054}
   m_Layer: 0
   m_Name: Root
   m_TagString: Untagged
@@ -245,6 +246,19 @@ Transform:
   - {fileID: 1023559784}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &66036054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66036051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e93df26c7a147b3aaf8619459beb79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PauseManager
+  pauseChannel: {fileID: 11400000, guid: a6c099968f12042539aa1e86f13dc21f, type: 2}
 --- !u!1 &103538698
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,9 +680,9 @@ RectTransform:
   - {fileID: 1820691248}
   m_Father: {fileID: 802513311}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -68}
   m_SizeDelta: {x: 80, y: 16}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &347061865
@@ -1534,7 +1548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &856213334
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1847,7 +1861,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ContextMenuController
   requestChannel: {fileID: 11400000, guid: 1b93b589a98f74dea86c0f9131d77539, type: 2}
   responceChannel: {fileID: 11400000, guid: 5cec44e85c96445eeab5c1aa0772ff1a, type: 2}
-  pauseChannel: {fileID: 0}
+  pauseChannel: {fileID: 11400000, guid: a6c099968f12042539aa1e86f13dc21f, type: 2}
   canvasRectTransform: {fileID: 1023559784}
   pivotRectTransform: {fileID: 1080406438}
   contextMenuRectTransform: {fileID: 422461638}
@@ -2779,9 +2793,9 @@ RectTransform:
   - {fileID: 791459082}
   m_Father: {fileID: 802513311}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -44}
   m_SizeDelta: {x: 80, y: 16}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1627008103
@@ -3186,9 +3200,9 @@ RectTransform:
   - {fileID: 1591854343}
   m_Father: {fileID: 802513311}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -92}
   m_SizeDelta: {x: 80, y: 16}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1875461053

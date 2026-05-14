@@ -43,9 +43,9 @@ public class WaveSpawner : MonoBehaviour
                 aliveEnemies.Add(enemy);
                 enemy.gameObject.SetActive(true);
 
-                await Awaitable.WaitForSecondsAsync(actions[actionIndex].SpawnRate);
+                await WaitWithPause(actions[actionIndex].SpawnRate);
             }
-            await Awaitable.WaitForSecondsAsync(actions[actionIndex].WaitAfter);
+            await WaitWithPause(actions[actionIndex].WaitAfter);
         }
 
         while (aliveEnemies.Count > 0)
@@ -77,5 +77,21 @@ public class WaveSpawner : MonoBehaviour
         ObjectPool newPool = new ObjectPool(prefab, poolParent, 1);
         pools.TryAdd(prefab, newPool);
         return newPool;
+    }
+
+    private async Awaitable WaitWithPause(float seconds)
+    {
+        float elapsed = 0f;
+
+        while (elapsed < seconds)
+        {
+            while (PauseManager.Instance.IsPaused)
+            {
+                await Awaitable.NextFrameAsync();
+            }
+
+            await Awaitable.NextFrameAsync();
+            elapsed += Time.deltaTime;
+        }
     }
 }

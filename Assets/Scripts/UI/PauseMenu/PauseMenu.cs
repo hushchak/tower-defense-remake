@@ -8,6 +8,11 @@ public class PauseMenu : MonoBehaviour
     [Space]
     [SerializeField] private GameObject pausePanel;
 
+    private void Awake()
+    {
+        pausePanel.SetActive(false);
+    }
+
     private void OnEnable()
     {
         pauseChannel.Subscribe(HandlePause);
