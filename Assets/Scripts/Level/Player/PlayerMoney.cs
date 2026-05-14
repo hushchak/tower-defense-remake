@@ -4,8 +4,11 @@ using UnityEngine;
 public class PlayerMoney : Singleton<PlayerMoney>
 {
     [SerializeField] private EventChannelInt moneyChangedChannel;
+    [SerializeField] private EventChannel waveEndChannel;
     [Space]
-    [SerializeField] private int startMoney;
+    [SerializeField] private int startMoney = 20;
+    [SerializeField] private int waveEndReward = 20;
+    [SerializeField] private int moneyMaxCapacity = 99;
     //[SerializeField] private Sound moneyAddSound;
 
     private int money;
@@ -17,9 +20,24 @@ public class PlayerMoney : Singleton<PlayerMoney>
         money = startMoney;
     }
 
+    private void OnEnable()
+    {
+        waveEndChannel.Subscribe(HandleWaveEnd);
+    }
+
+    private void OnDisable()
+    {
+        waveEndChannel.Unsubscribe(HandleWaveEnd);
+    }
+
+    private void HandleWaveEnd()
+    {
+        AddMoney(waveEndReward);
+    }
+
     public void AddMoney(int amount)
     {
-        money += amount;
+        money = Mathf.Clamp(money + amount, 0, moneyMaxCapacity);
         moneyChangedChannel.Raise(money);
         //Audio.Play(moneyAddSound);
     }

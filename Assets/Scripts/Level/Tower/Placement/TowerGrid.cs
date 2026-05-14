@@ -76,6 +76,15 @@ public class TowerGrid : MonoBehaviour
         }
     }
 
+    public Tower GetTowerAt(int x, int y)
+    {
+        if (grid.TryGetValue(x, y, out Tower tower))
+        {
+            return tower;
+        }
+        return null;
+    }
+
 #region Tower Spawning
     private void SpawnTower(int x, int y, Tower prefab)
     {

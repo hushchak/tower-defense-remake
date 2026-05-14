@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8202135804773606925}
-  - component: {fileID: 6857456188728996988}
+  - component: {fileID: 3010489300903661087}
   m_Layer: 0
   m_Name: Tower (Fireplace)
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   - {fileID: 4709312942364923496}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6857456188728996988
+--- !u!114 &3010489300903661087
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,9 +42,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3334457479014547284}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00c56dbae68f4648ae14738d4eb4bf7, type: 3}
+  m_Script: {fileID: 11500000, guid: c757727c08cf043d6b06e9bc402fdebf, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NullTower
+  m_EditorClassIdentifier: Assembly-CSharp::FireplaceTower
   Data: {fileID: 11400000, guid: 1760dbb52e3214fa09992668f99d9880, type: 2}
 --- !u!1 &5799016921069998182
 GameObject:

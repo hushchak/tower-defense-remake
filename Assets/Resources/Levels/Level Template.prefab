@@ -411,7 +411,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMoney
   moneyChangedChannel: {fileID: 11400000, guid: 0db95643da3654d97a3eda6d9f4210b6, type: 2}
+  waveEndChannel: {fileID: 11400000, guid: 67192958e916f4b98aff67fa15ac48c3, type: 2}
   startMoney: 20
+  waveEndReward: 20
+  moneyMaxCapacity: 99
 --- !u!1 &7243928473842078692
 GameObject:
   m_ObjectHideFlags: 0

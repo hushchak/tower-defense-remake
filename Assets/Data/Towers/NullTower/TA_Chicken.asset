@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: TA_Chicken
   m_EditorClassIdentifier: Assembly-CSharp::TowerAction
   <EntryName>k__BackingField: 'Chicken: 10$'
-  <TowerPrefab>k__BackingField: {fileID: 6857456188728996988, guid: 8a98b78e22fb846a88275aba2c76d820, type: 3}
+  <TowerPrefab>k__BackingField: {fileID: 1120093141627038371, guid: 8a98b78e22fb846a88275aba2c76d820, type: 3}
   <MoneyDifference>k__BackingField: -10

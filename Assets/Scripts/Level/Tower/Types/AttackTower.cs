@@ -37,7 +37,7 @@ public class AttackTower : Tower
         SpawnProjectile(new ProjectileData(
                 Data.ProjectileSprite,
                 Data.ProjectileRadius,
-                Data.Damage,
+                GetProjectileDamage(),
                 Data.DamageType,
                 Data.ProjectileSpeed,
                 Data.AttackRange,
@@ -50,7 +50,7 @@ public class AttackTower : Tower
         return true;
     }
 
-    private GameObject[] GetTargets (Collider2D[] potentialTargets)
+    private GameObject[] GetTargets(Collider2D[] potentialTargets)
     {
         List<GameObject> targets = new();
         foreach (Collider2D potentialTarget in potentialTargets)
@@ -109,5 +109,25 @@ public class AttackTower : Tower
         projectile.transform.position = this.transform.position;
         projectile.Setup(data);
         projectile.gameObject.SetActive(true);
+    }
+
+    private int GetProjectileDamage() => Mathf.RoundToInt(Data.Damage + (Data.Damage * GetFireplaceAmount() * 0.5f));
+
+    private int GetFireplaceAmount()
+    {
+        int amount = 0;
+        Tower[] towers = new Tower[4];
+
+        towers[0] = ParentGrid.GetTowerAt(Index.x, Index.y + 1);
+        towers[1] = ParentGrid.GetTowerAt(Index.x + 1, Index.y);
+        towers[2] = ParentGrid.GetTowerAt(Index.x, Index.y - 1);
+        towers[3] = ParentGrid.GetTowerAt(Index.x - 1, Index.y);
+
+        foreach (Tower tower in towers)
+        {
+            if (tower is FireplaceTower)
+                amount++;
+        }
+        return amount;
     }
 }

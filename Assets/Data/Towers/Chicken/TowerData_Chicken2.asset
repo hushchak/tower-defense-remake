@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 809c2296acbb4432ba0a7d211b14531b, type: 3}
-  m_Name: TowerData_Chicken
+  m_Name: TowerData_Chicken2
   m_EditorClassIdentifier: Assembly-CSharp::TowerData
   <ProjectileSprite>k__BackingField: {fileID: 0}
   <ProjectileRadius>k__BackingField: 0.2
@@ -26,7 +26,9 @@ MonoBehaviour:
   <ObstacleLayer>k__BackingField:
     serializedVersion: 2
     m_Bits: 0
-  <SlownessCoefficient>k__BackingField: 0
+  <SlownessData>k__BackingField:
+    <Coefficient>k__BackingField: 0
+    <Duration>k__BackingField: 0
   <DontStopAfterEnemyHit>k__BackingField: 0
   <Actions>k__BackingField:
-  - {fileID: 11400000, guid: 061f3e5224a7d420c9bc4a9d5159f8e1, type: 2}
+  - {fileID: 11400000, guid: 8dd4d317695c7401cbc1b4c28695a67b, type: 2}
