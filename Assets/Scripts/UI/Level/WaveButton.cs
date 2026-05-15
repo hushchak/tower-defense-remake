@@ -20,6 +20,15 @@ public class WaveButton : MonoBehaviour
         waveEndChannel.Unsubscribe(TurnOn);
     }
 
-    private void TurnOn() => button.interactable = true;
-    private void TurnOff() => button.interactable = false;
+    private void TurnOn()
+    {
+        button.interactable = true;
+        Debug.Log("On");
+    }
+
+    private void TurnOff()
+    {
+        button.interactable = false;
+        Debug.Log("Off");
+    }
 }

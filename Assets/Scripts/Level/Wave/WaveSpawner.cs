@@ -10,7 +10,7 @@ public class WaveSpawner : MonoBehaviour
     [Space]
     [SerializeField] private Transform poolsParent;
 
-    private Dictionary<GameObject, ObjectPool> pools = new();
+    private Dictionary<string, ObjectPool> pools = new();
     private int runningPaths = 0;
 
     public async Awaitable SpawnWave(WaveData data)
@@ -46,6 +46,7 @@ public class WaveSpawner : MonoBehaviour
                 await WaitWithPause(actions[actionIndex].SpawnRate);
             }
             await WaitWithPause(actions[actionIndex].WaitAfter);
+            actionIndex++;
         }
 
         while (aliveEnemies.Count > 0)
@@ -66,7 +67,7 @@ public class WaveSpawner : MonoBehaviour
 
     private ObjectPool GetPool(GameObject prefab)
     {
-        if (pools.TryGetValue(prefab, out ObjectPool pool))
+        if (pools.TryGetValue(prefab.name, out ObjectPool pool))
         {
             return pool;
         }
@@ -75,7 +76,7 @@ public class WaveSpawner : MonoBehaviour
         poolParent.parent = poolsParent;
 
         ObjectPool newPool = new ObjectPool(prefab, poolParent, 1);
-        pools.TryAdd(prefab, newPool);
+        pools.TryAdd(prefab.name, newPool);
         return newPool;
     }
 

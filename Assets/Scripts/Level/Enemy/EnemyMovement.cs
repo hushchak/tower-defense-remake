@@ -18,7 +18,7 @@ public class EnemyMovement : MonoBehaviour
         this.path = path;
         this.effects = effects;
 
-        currentPoint = 0;
+        currentPoint = data.IsFlying ? path.PointsCount - 1 : 0;
     }
 
     public void HandleMovement(float delta)

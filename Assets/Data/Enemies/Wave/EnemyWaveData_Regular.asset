@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ffe5f0585ec7a4d869158d4f747ab597, type: 3}
-  m_Name: EnemyWaveData_Small
+  m_Name: EnemyWaveData_Regular
   m_EditorClassIdentifier: Assembly-CSharp::EnemyWaveData
-  <Sprite>k__BackingField: {fileID: 368543389579951487, guid: 5c29134db47794857a2744cac677b4e5, type: 3}
-  <Prefab>k__BackingField: {fileID: 3952056169744226232, guid: 9fcfe329cf3ff42d39417397e6873e72, type: 3}
+  <Sprite>k__BackingField: {fileID: -5782521184205631276, guid: 57686809825854837802c74f246c4274, type: 3}
+  <Prefab>k__BackingField: {fileID: 3540161137602985376, guid: ae336904389a6494b993068c99ba7c54, type: 3}
