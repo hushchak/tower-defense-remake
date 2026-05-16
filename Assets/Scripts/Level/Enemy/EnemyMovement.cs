@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public event Action OnPathEndReached;
+    public event Action<Vector2> OnDirectionChanged;
 
     private EnemyData data;
     private EnemyEffects effects;
@@ -36,9 +37,14 @@ public class EnemyMovement : MonoBehaviour
         {
             transform.position = path.GetPoint(currentPoint).position;
             currentPoint++;
+
             if (currentPoint >= path.PointsCount)
             {
                 OnPathEndReached?.Invoke();
+            }
+            else
+            {
+                OnDirectionChanged?.Invoke((path.GetPoint(currentPoint).position - transform.position).normalized);
             }
         }
     }

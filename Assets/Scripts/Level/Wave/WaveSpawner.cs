@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -35,25 +36,33 @@ public class WaveSpawner : MonoBehaviour
 
         List<Enemy> aliveEnemies = new();
         int actionIndex = 0;
-        for (int i = 0; i < actions.Length; i++)
+        try
         {
-            for (int j = 0; j < actions[actionIndex].Number; j++)
+            for (int i = 0; i < actions.Length; i++)
             {
-                Enemy enemy = SpawnEnemy(path, actions[actionIndex].Enemy);
-                enemy.OnDeactivated += () => aliveEnemies.Remove(enemy);
-                aliveEnemies.Add(enemy);
-                enemy.gameObject.SetActive(true);
+                for (int j = 0; j < actions[actionIndex].Number; j++)
+                {
+                    Enemy enemy = SpawnEnemy(path, actions[actionIndex].Enemy);
+                    enemy.OnDeactivated += () => aliveEnemies.Remove(enemy);
+                    aliveEnemies.Add(enemy);
+                    enemy.gameObject.SetActive(true);
 
-                await WaitWithPause(actions[actionIndex].SpawnRate, cancellationToken);
+                    await WaitWithPause(actions[actionIndex].SpawnRate, cancellationToken);
+                }
+                await WaitWithPause(actions[actionIndex].WaitAfter, cancellationToken);
+                actionIndex++;
             }
-            await WaitWithPause(actions[actionIndex].WaitAfter, cancellationToken);
-            actionIndex++;
         }
+        catch (OperationCanceledException)
+        {
+        }
+        finally
+        {
+            while (aliveEnemies.Count > 0)
+                await Awaitable.NextFrameAsync();
 
-        while (aliveEnemies.Count > 0)
-            await Awaitable.NextFrameAsync();
-
-        runningPaths--;
+            runningPaths--;
+        }
     }
 
     private Enemy SpawnEnemy(EnemyPath path, EnemyWaveData data)

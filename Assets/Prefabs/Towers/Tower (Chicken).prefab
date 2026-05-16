@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 4709312942364923496}
   - component: {fileID: 598252059565048347}
   - component: {fileID: 2430288517808225966}
+  - component: {fileID: 4099267774401198361}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -158,3 +159,16 @@ MonoBehaviour:
   chicken: {fileID: 1120093141627038371}
   sprite1: {fileID: -1249941551368896030, guid: 51b97d3115921411bac684ab030c56e0, type: 3}
   sprite2: {fileID: -8985877945988413723, guid: 51b97d3115921411bac684ab030c56e0, type: 3}
+--- !u!114 &4099267774401198361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5799016921069998182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 080be6b79487445c3ad2e58ab56c80f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YSortStatic
+  spriteRenderer: {fileID: 598252059565048347}

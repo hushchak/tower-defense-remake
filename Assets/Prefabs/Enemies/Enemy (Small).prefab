@@ -136,6 +136,8 @@ GameObject:
   - component: {fileID: 1362780240760262289}
   - component: {fileID: 1013588362435036000}
   - component: {fileID: 2340931627926469702}
+  - component: {fileID: 6419078095634124147}
+  - component: {fileID: 8728114531647532979}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -239,3 +241,30 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6419078095634124147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6222071494099419395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c99713dcd732c4a6c9803d3449e23602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YSortDynamic
+  spriteRenderer: {fileID: 1013588362435036000}
+--- !u!114 &8728114531647532979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6222071494099419395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d06fb1ad65ea478083c84d59a8267cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySprite
+  enemyMovement: {fileID: 4549744625557661207}
+  spriteObject: {fileID: 6222071494099419395}
