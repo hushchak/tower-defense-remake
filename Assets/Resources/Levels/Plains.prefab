@@ -681,6 +681,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1321659424574484256, guid: b51ef585e6ed84e469720cba98e4f384, type: 3}
+      propertyPath: nextLevelsNames.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1321659424574484256, guid: b51ef585e6ed84e469720cba98e4f384, type: 3}
+      propertyPath: 'nextLevelsNames.Array.data[0]'
+      value: test-next-level
+      objectReference: {fileID: 0}
     - target: {fileID: 1595461668808735204, guid: b51ef585e6ed84e469720cba98e4f384, type: 3}
       propertyPath: m_Name
       value: Plains

@@ -22,7 +22,7 @@ public static class SaveManager
     public static GameData GetGameData() =>
         gameStorage.Read();
 
-    public static void SetPreferencesData(GameData data) =>
+    public static void SetGameData(GameData data) =>
         gameStorage.Write(data);
 
     public static PreferencesData GetPreferencesData() =>

@@ -17,8 +17,8 @@ public class Projectile : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //if (SessionStateManager.Instance.IsPaused)
-        //    return;
+        if (PauseManager.Instance.IsPaused)
+            return;
 
         MoveToTarget(Time.fixedDeltaTime);
         CheckEnemies();

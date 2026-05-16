@@ -49,6 +49,7 @@ MonoBehaviour:
   waveTriggerChannel: {fileID: 11400000, guid: 9c900b9a7631e42a19ab6fb915155937, type: 2}
   waveStartChannel: {fileID: 11400000, guid: acbe941f041b64e41930b1a5cdb06763, type: 2}
   waveEndChannel: {fileID: 11400000, guid: 67192958e916f4b98aff67fa15ac48c3, type: 2}
+  allWaveEndChannel: {fileID: 11400000, guid: ee403228dd5354efa9d8393e7bb4e4e0, type: 2}
   waveSpawner: {fileID: 8778907790914460697}
   data: {fileID: 11400000, guid: 0fa080d1cb70f4684b43dd08c3158381, type: 2}
 --- !u!114 &8778907790914460697
@@ -115,6 +116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93eeb8a518e624ae0930a87daafc28e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Level
+  levelEndChannel: {fileID: 11400000, guid: d37444f431a1a4398a54fcb73385e343, type: 2}
+  nextLevelsNames: []
 --- !u!1 &3206303648097431750
 GameObject:
   m_ObjectHideFlags: 0

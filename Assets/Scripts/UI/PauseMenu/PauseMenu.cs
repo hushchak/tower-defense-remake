@@ -4,9 +4,12 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private EventChannelBool pauseChannel;
-    [SerializeField] private EventChannel LevelExitInitiationChannel;
+    [SerializeField] private EventChannel levelExitInitiationChannel;
+    [SerializeField] private EventChannelBool levelEndChannel;
     [Space]
     [SerializeField] private GameObject pausePanel;
+
+    private bool pauseMenuEnabled;
 
     private void Awake()
     {
@@ -15,43 +18,38 @@ public class PauseMenu : MonoBehaviour
 
     private void OnEnable()
     {
-        pauseChannel.Subscribe(HandlePause);
+        InputReader.OnBackPerformed += HandleBackPerformed;
+        levelEndChannel.Subscribe(HandleLevelEnd);
     }
 
     private void OnDisable()
     {
-        pauseChannel.Unsubscribe(HandlePause);
+        InputReader.OnBackPerformed -= HandleBackPerformed;
+        levelEndChannel.Unsubscribe(HandleLevelEnd);
     }
 
-    private void HandlePause(bool IsPaused)
+    private void HandleBackPerformed()
     {
-        if (IsPaused)
-        {
+        pauseMenuEnabled = !pauseMenuEnabled;
+        SetPauseMenu(pauseMenuEnabled);
+    }
+
+    private void HandleLevelEnd(bool end) => HidePausePanel();
+
+    private void SetPauseMenu(bool pause)
+    {
+        pauseMenuEnabled = pause;
+        PauseManager.Instance.SetPause(pauseMenuEnabled);
+
+        if (pauseMenuEnabled)
             InitiatePausePanel();
-        }
         else
-        {
             HidePausePanel();
-        }
     }
 
-    private void InitiatePausePanel()
-    {
-        pausePanel.SetActive(true);
-    }
+    private void InitiatePausePanel() => pausePanel.SetActive(true);
+    private void HidePausePanel() => pausePanel.SetActive(false);
 
-    private void HidePausePanel()
-    {
-        pausePanel.SetActive(false);
-    }
-
-    public void ResumeButtonAction()
-    {
-        PauseManager.Instance.SetPause(false);
-    }
-
-    public void ExitButtonAction()
-    {
-        LevelExitInitiationChannel.Raise();
-    }
+    public void ResumeButtonAction() => SetPauseMenu(false);
+    public void ExitButtonAction() => levelExitInitiationChannel.Raise();
 }

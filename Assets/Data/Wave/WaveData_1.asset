@@ -15,35 +15,31 @@ MonoBehaviour:
   <Waves>k__BackingField:
   - <Actions_1>k__BackingField:
     - <Enemy>k__BackingField: {fileID: 11400000, guid: fc3a4fd12bd5d43a9802dda3928badd2, type: 2}
-      <Number>k__BackingField: 10
-      <SpawnRate>k__BackingField: 1
-      <WaitAfter>k__BackingField: 3
-    - <Enemy>k__BackingField: {fileID: 11400000, guid: fc3a4fd12bd5d43a9802dda3928badd2, type: 2}
       <Number>k__BackingField: 2
       <SpawnRate>k__BackingField: 1
-      <WaitAfter>k__BackingField: 1
+      <WaitAfter>k__BackingField: 3
     <Actions_2>k__BackingField: []
     <Actions_3>k__BackingField: []
   - <Actions_1>k__BackingField:
     - <Enemy>k__BackingField: {fileID: 11400000, guid: fc3a4fd12bd5d43a9802dda3928badd2, type: 2}
       <Number>k__BackingField: 2
-      <SpawnRate>k__BackingField: 2
+      <SpawnRate>k__BackingField: 0.3
       <WaitAfter>k__BackingField: 1
     - <Enemy>k__BackingField: {fileID: 11400000, guid: a0f1382ea085f40f0a9de054506aa883, type: 2}
       <Number>k__BackingField: 1
-      <SpawnRate>k__BackingField: 1
+      <SpawnRate>k__BackingField: 0.3
       <WaitAfter>k__BackingField: 1
     - <Enemy>k__BackingField: {fileID: 11400000, guid: e6169eafdfbe344dd94c59864f155221, type: 2}
-      <Number>k__BackingField: 2
-      <SpawnRate>k__BackingField: 1
+      <Number>k__BackingField: 3
+      <SpawnRate>k__BackingField: 0.3
       <WaitAfter>k__BackingField: 1
     - <Enemy>k__BackingField: {fileID: 11400000, guid: 6ac5221bd1bea4c4fafb1155f494b0d5, type: 2}
       <Number>k__BackingField: 2
-      <SpawnRate>k__BackingField: 1
+      <SpawnRate>k__BackingField: 0.3
       <WaitAfter>k__BackingField: 1
     - <Enemy>k__BackingField: {fileID: 11400000, guid: 2d7840b25a45c45bd834fc5c6f00f103, type: 2}
-      <Number>k__BackingField: 2
-      <SpawnRate>k__BackingField: 1
+      <Number>k__BackingField: 1
+      <SpawnRate>k__BackingField: 0.3
       <WaitAfter>k__BackingField: 1
     <Actions_2>k__BackingField: []
     <Actions_3>k__BackingField: []

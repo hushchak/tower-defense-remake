@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
@@ -13,22 +14,22 @@ public class WaveSpawner : MonoBehaviour
     private Dictionary<string, ObjectPool> pools = new();
     private int runningPaths = 0;
 
-    public async Awaitable SpawnWave(WaveData data)
+    public async Awaitable SpawnWave(WaveData data, CancellationToken cancellationToken)
     {
         if (data.Actions_1 != null && Path_1 != null)
-            RunLine(Path_1, data.Actions_1);
+            RunLine(Path_1, data.Actions_1, cancellationToken);
 
         if (data.Actions_2 != null && Path_2 != null)
-            RunLine(Path_2, data.Actions_2);
+            RunLine(Path_2, data.Actions_2, cancellationToken);
 
         if (data.Actions_3 != null && Path_3 != null)
-            RunLine(Path_3, data.Actions_3);
+            RunLine(Path_3, data.Actions_3, cancellationToken);
 
         while (runningPaths > 0)
             await Awaitable.NextFrameAsync();
     }
 
-    private async void RunLine(EnemyPath path, WaveAction[] actions)
+    private async void RunLine(EnemyPath path, WaveAction[] actions, CancellationToken cancellationToken)
     {
         runningPaths++;
 
@@ -43,9 +44,9 @@ public class WaveSpawner : MonoBehaviour
                 aliveEnemies.Add(enemy);
                 enemy.gameObject.SetActive(true);
 
-                await WaitWithPause(actions[actionIndex].SpawnRate);
+                await WaitWithPause(actions[actionIndex].SpawnRate, cancellationToken);
             }
-            await WaitWithPause(actions[actionIndex].WaitAfter);
+            await WaitWithPause(actions[actionIndex].WaitAfter, cancellationToken);
             actionIndex++;
         }
 
@@ -80,7 +81,7 @@ public class WaveSpawner : MonoBehaviour
         return newPool;
     }
 
-    private async Awaitable WaitWithPause(float seconds)
+    private async Awaitable WaitWithPause(float seconds, CancellationToken cancellationToken)
     {
         float elapsed = 0f;
 
@@ -88,10 +89,10 @@ public class WaveSpawner : MonoBehaviour
         {
             while (PauseManager.Instance.IsPaused)
             {
-                await Awaitable.NextFrameAsync();
+                await Awaitable.NextFrameAsync(cancellationToken);
             }
 
-            await Awaitable.NextFrameAsync();
+            await Awaitable.NextFrameAsync(cancellationToken);
             elapsed += Time.deltaTime;
         }
     }
