@@ -42,7 +42,7 @@ public class ContextMenuController : MonoBehaviour
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
             canvasRectTransform,
             request.ScreenPosition,
-            null,
+            Camera.main,
             out Vector2 localPoint
         );
 

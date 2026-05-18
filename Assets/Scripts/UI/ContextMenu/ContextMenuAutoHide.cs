@@ -17,7 +17,7 @@ public class ContextMenuAutoHide : MonoBehaviour
         bool isInside = RectTransformUtility.RectangleContainsScreenPoint(
             menuRect,
             mousePos,
-            null
+            Camera.main
         );
 
         if (isInside)
