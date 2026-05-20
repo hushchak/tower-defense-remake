@@ -13,6 +13,16 @@ MonoBehaviour:
   m_Name: TowerData_Chicken0
   m_EditorClassIdentifier: Assembly-CSharp::TowerData
   <ProjectileSprite>k__BackingField: {fileID: 0}
+  <UpgradeSound>k__BackingField:
+    Clip: {fileID: 8300000, guid: 355b074e9e16648bd926888085ec9fbd, type: 3}
+    Volume: 0.6
+    Pitch: 1
+    RandomPitch: 0
+  <AttackSound>k__BackingField:
+    Clip: {fileID: 0}
+    Volume: 0.5
+    Pitch: 1
+    RandomPitch: 0
   <ProjectileRadius>k__BackingField: 0.2
   <ProjectileSpeed>k__BackingField: 15
   <ProjectilePrefab>k__BackingField: {fileID: 0}
@@ -26,7 +36,9 @@ MonoBehaviour:
   <ObstacleLayer>k__BackingField:
     serializedVersion: 2
     m_Bits: 0
-  <SlownessCoefficient>k__BackingField: 0
+  <SlownessData>k__BackingField:
+    <Coefficient>k__BackingField: 0
+    <Duration>k__BackingField: 0
   <DontStopAfterEnemyHit>k__BackingField: 0
   <Actions>k__BackingField:
   - {fileID: 11400000, guid: 061f3e5224a7d420c9bc4a9d5159f8e1, type: 2}

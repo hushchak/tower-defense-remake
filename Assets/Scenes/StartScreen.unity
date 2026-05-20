@@ -268,6 +268,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 647b6b57ad24f4a2382d712c930f85fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartScreenRoot
+  startGameSound:
+    Clip: {fileID: 8300000, guid: 983a5954ea1dd4532ba226da7c7ffa9f, type: 3}
+    Volume: 1
+    Pitch: 1
+    RandomPitch: 0
 --- !u!1001 &677419457
 PrefabInstance:
   m_ObjectHideFlags: 0

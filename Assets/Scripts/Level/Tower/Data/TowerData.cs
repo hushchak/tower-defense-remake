@@ -4,6 +4,9 @@ using UnityEngine;
 public class TowerData : ScriptableObject
 {
     [field: SerializeField] public Sprite ProjectileSprite { get; private set; }
+    [field: SerializeField] public Sound UpgradeSound { get; private set; }
+    [field: SerializeField] public Sound AttackSound { get; private set; }
+    [field: Space]
     [field: SerializeField] public float ProjectileRadius { get; private set; } = 0.2f;
     [field: SerializeField] public float ProjectileSpeed { get; private set; } = 15f;
     [field: SerializeField] public Projectile ProjectilePrefab { get; private set; }

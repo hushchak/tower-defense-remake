@@ -13,6 +13,16 @@ MonoBehaviour:
   m_Name: TowerData_Worker
   m_EditorClassIdentifier: Assembly-CSharp::TowerData
   <ProjectileSprite>k__BackingField: {fileID: 8618663976898325987, guid: 864e17c5cc6184ff6a75d89b2e6860b0, type: 3}
+  <UpgradeSound>k__BackingField:
+    Clip: {fileID: 8300000, guid: 355b074e9e16648bd926888085ec9fbd, type: 3}
+    Volume: 0.6
+    Pitch: 1
+    RandomPitch: 0
+  <AttackSound>k__BackingField:
+    Clip: {fileID: 8300000, guid: 1fda60f01afcb4e0ca7aee0926c2661a, type: 3}
+    Volume: 0.5
+    Pitch: 1
+    RandomPitch: 0.05
   <ProjectileRadius>k__BackingField: 0.2
   <ProjectileSpeed>k__BackingField: 15
   <ProjectilePrefab>k__BackingField: {fileID: 4534730106936269906, guid: 1ee44742a73b14ad7b9787d52557e056, type: 3}

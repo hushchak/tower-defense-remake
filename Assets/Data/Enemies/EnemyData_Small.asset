@@ -19,3 +19,8 @@ MonoBehaviour:
   <HealthPoints>k__BackingField: 50
   <DefenceCoefficient>k__BackingField: 0
   <FireDefenceCoefficient>k__BackingField: 0
+  <DeathSound>k__BackingField:
+    Clip: {fileID: 8300000, guid: 54c31bd5ba3804684807fd462d457484, type: 3}
+    Volume: 0.5
+    Pitch: 1
+    RandomPitch: 0.05

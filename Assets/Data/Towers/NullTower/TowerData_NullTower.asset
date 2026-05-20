@@ -12,6 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 809c2296acbb4432ba0a7d211b14531b, type: 3}
   m_Name: TowerData_NullTower
   m_EditorClassIdentifier: Assembly-CSharp::TowerData
+  <ProjectileSprite>k__BackingField: {fileID: 0}
+  <UpgradeSound>k__BackingField:
+    Clip: {fileID: 8300000, guid: 355b074e9e16648bd926888085ec9fbd, type: 3}
+    Volume: 0.6
+    Pitch: 1
+    RandomPitch: 0
+  <AttackSound>k__BackingField:
+    Clip: {fileID: 0}
+    Volume: 0.5
+    Pitch: 1
+    RandomPitch: 0
+  <ProjectileRadius>k__BackingField: 0.2
+  <ProjectileSpeed>k__BackingField: 15
+  <ProjectilePrefab>k__BackingField: {fileID: 0}
+  <Damage>k__BackingField: 10
+  <DamageType>k__BackingField: 0
+  <AttackRate>k__BackingField: 0.833
+  <AttackRange>k__BackingField: 2
+  <EnemyLayer>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 0
+  <ObstacleLayer>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 0
+  <SlownessData>k__BackingField:
+    <Coefficient>k__BackingField: 0
+    <Duration>k__BackingField: 0
+  <DontStopAfterEnemyHit>k__BackingField: 0
   <Actions>k__BackingField:
   - {fileID: 11400000, guid: 069c3e19ba3774902b9baa2304030c45, type: 2}
   - {fileID: 11400000, guid: 3d150f16a274d4eb58eb24a1997f7fb3, type: 2}

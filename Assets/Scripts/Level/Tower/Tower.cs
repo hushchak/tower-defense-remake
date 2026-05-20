@@ -37,6 +37,7 @@ public abstract class Tower : MonoBehaviour
             return;
         }
 
+        Audio.Play(Data.UpgradeSound);
         ParentGrid.PlaceTower(Index.x, Index.y, responce.TowerPrefab);
     }
 }

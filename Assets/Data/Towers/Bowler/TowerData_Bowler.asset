@@ -13,6 +13,16 @@ MonoBehaviour:
   m_Name: TowerData_Bowler
   m_EditorClassIdentifier: Assembly-CSharp::TowerData
   <ProjectileSprite>k__BackingField: {fileID: 7102705430510447968, guid: 864e17c5cc6184ff6a75d89b2e6860b0, type: 3}
+  <UpgradeSound>k__BackingField:
+    Clip: {fileID: 8300000, guid: 355b074e9e16648bd926888085ec9fbd, type: 3}
+    Volume: 0.6
+    Pitch: 1
+    RandomPitch: 0
+  <AttackSound>k__BackingField:
+    Clip: {fileID: 8300000, guid: 0c1ea65c48cb14c67a6e316ab29537df, type: 3}
+    Volume: 0.5
+    Pitch: 1
+    RandomPitch: 0.05
   <ProjectileRadius>k__BackingField: 0.4
   <ProjectileSpeed>k__BackingField: 7
   <ProjectilePrefab>k__BackingField: {fileID: 4534730106936269906, guid: 1ee44742a73b14ad7b9787d52557e056, type: 3}
@@ -26,7 +36,9 @@ MonoBehaviour:
   <ObstacleLayer>k__BackingField:
     serializedVersion: 2
     m_Bits: 128
-  <SlownessCoefficient>k__BackingField: 0
+  <SlownessData>k__BackingField:
+    <Coefficient>k__BackingField: 0
+    <Duration>k__BackingField: 0
   <DontStopAfterEnemyHit>k__BackingField: 1
   <Actions>k__BackingField:
   - {fileID: 11400000, guid: 038cb8aef15184694a358199728a1591, type: 2}

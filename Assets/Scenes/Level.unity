@@ -422,6 +422,16 @@ MonoBehaviour:
   menuTitle: {fileID: 1010089073}
   winTitle: You Win!
   loseTitle: You Lose
+  winSound:
+    Clip: {fileID: 8300000, guid: 11b2da4a459cb4318ae056f1a81eaa57, type: 3}
+    Volume: 1
+    Pitch: 1
+    RandomPitch: 0
+  loseSound:
+    Clip: {fileID: 8300000, guid: 73fa12dbebda741378bc69ad9ecac5d5, type: 3}
+    Volume: 1
+    Pitch: 1
+    RandomPitch: 0
 --- !u!1 &213511132
 GameObject:
   m_ObjectHideFlags: 0
@@ -2262,6 +2272,11 @@ MonoBehaviour:
   contextMenu: {fileID: 422461637}
   autoHide: {fileID: 422461643}
   entryPrefab: {fileID: 8034936754361508344, guid: 5cb297a2a711f4e2d8b85a777892f8f2, type: 3}
+  contextMenuSound:
+    Clip: {fileID: 8300000, guid: 5752c361988ee47a08a4b7a56404d720, type: 3}
+    Volume: 0.5
+    Pitch: 1
+    RandomPitch: 0
 --- !u!1 &1080406437
 GameObject:
   m_ObjectHideFlags: 0

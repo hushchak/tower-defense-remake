@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
 
     private bool pauseMenuEnabled;
+    private bool canPause = true;
 
     private void Awake()
     {
@@ -30,11 +31,18 @@ public class PauseMenu : MonoBehaviour
 
     private void HandleBackPerformed()
     {
+        if (!canPause)
+            return;
+
         pauseMenuEnabled = !pauseMenuEnabled;
         SetPauseMenu(pauseMenuEnabled);
     }
 
-    private void HandleLevelEnd(bool end) => HidePausePanel();
+    private void HandleLevelEnd(bool end)
+    {
+        HidePausePanel();
+        canPause = false;
+    }
 
     private void SetPauseMenu(bool pause)
     {

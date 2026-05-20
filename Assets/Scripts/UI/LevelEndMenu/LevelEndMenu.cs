@@ -11,6 +11,8 @@ public class LevelEndMenu : MonoBehaviour
     [SerializeField] private TMP_Text menuTitle;
     [SerializeField] private string winTitle;
     [SerializeField] private string loseTitle;
+    [SerializeField] private Sound winSound;
+    [SerializeField] private Sound loseSound;
 
     private void Awake()
     {
@@ -27,10 +29,13 @@ public class LevelEndMenu : MonoBehaviour
         levelEndChannel.Unsubscribe(HandleLevelEnd);
     }
 
-    private void HandleLevelEnd(bool end)
+    private async void HandleLevelEnd(bool end)
     {
         menuPanel.SetActive(true);
         menuTitle.text = end ? winTitle : loseTitle;
+
+        Audio.Play(end ? winSound : loseSound);
+        await Awaitable.WaitForSecondsAsync(end ? winSound.Clip.length : loseSound.Clip.length);
         InputReader.OnStartPerformed += InitiateLevelEnd;
     }
 

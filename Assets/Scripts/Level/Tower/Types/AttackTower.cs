@@ -21,6 +21,7 @@ public class AttackTower : Tower
 
         if (TryAttack())
         {
+            Audio.Play(Data.AttackSound);
             nextAttackTime = Time.time + Data.AttackRate;
         }
     }

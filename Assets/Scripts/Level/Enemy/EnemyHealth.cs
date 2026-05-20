@@ -51,6 +51,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
 
     private void Die()
     {
+        Audio.Play(data.DeathSound);
         OnDeath?.Invoke();
     }
 

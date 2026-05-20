@@ -13,6 +13,16 @@ MonoBehaviour:
   m_Name: TowerData_Spear1
   m_EditorClassIdentifier: Assembly-CSharp::TowerData
   <ProjectileSprite>k__BackingField: {fileID: 201767957516689898, guid: 864e17c5cc6184ff6a75d89b2e6860b0, type: 3}
+  <UpgradeSound>k__BackingField:
+    Clip: {fileID: 8300000, guid: 355b074e9e16648bd926888085ec9fbd, type: 3}
+    Volume: 1
+    Pitch: 1
+    RandomPitch: 0
+  <AttackSound>k__BackingField:
+    Clip: {fileID: 8300000, guid: 1fda60f01afcb4e0ca7aee0926c2661a, type: 3}
+    Volume: 1
+    Pitch: 1
+    RandomPitch: 0.05
   <ProjectileRadius>k__BackingField: 0.2
   <ProjectileSpeed>k__BackingField: 15
   <ProjectilePrefab>k__BackingField: {fileID: 4534730106936269906, guid: 1ee44742a73b14ad7b9787d52557e056, type: 3}
@@ -26,7 +36,9 @@ MonoBehaviour:
   <ObstacleLayer>k__BackingField:
     serializedVersion: 2
     m_Bits: 128
-  <SlownessCoefficient>k__BackingField: 0
+  <SlownessData>k__BackingField:
+    <Coefficient>k__BackingField: 0
+    <Duration>k__BackingField: 0
   <DontStopAfterEnemyHit>k__BackingField: 0
   <Actions>k__BackingField:
   - {fileID: 11400000, guid: 5b535696400db47b9875caef01db849b, type: 2}

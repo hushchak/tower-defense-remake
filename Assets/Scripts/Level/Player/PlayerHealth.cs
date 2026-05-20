@@ -6,6 +6,8 @@ public class PlayerHealth : Singleton<PlayerHealth>
     [SerializeField] private EventChannelInt healthChangedChannel;
     [Space]
     [SerializeField] private int maxHealth;
+    [Space]
+    [SerializeField] private Sound hurtSound;
 
     private int health;
     public int Health => health;
@@ -24,6 +26,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
             : health;
 
         healthChangedChannel.Raise(health);
+        Audio.Play(hurtSound);
 
         if (health == 0)
         {

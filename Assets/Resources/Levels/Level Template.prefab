@@ -402,6 +402,11 @@ MonoBehaviour:
   deathEventChannel: {fileID: 11400000, guid: 0f5fca87a6aa145b993151dae1398092, type: 2}
   healthChangedChannel: {fileID: 11400000, guid: 3d3adc2077e15429eb646e2003aeb720, type: 2}
   maxHealth: 20
+  hurtSound:
+    Clip: {fileID: 8300000, guid: fdfc7cb7ea4a040b2aa3cde34e91db8f, type: 3}
+    Volume: 1
+    Pitch: 1
+    RandomPitch: 0.05
 --- !u!114 &2029687899706953970
 MonoBehaviour:
   m_ObjectHideFlags: 0

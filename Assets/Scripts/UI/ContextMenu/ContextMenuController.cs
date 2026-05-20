@@ -16,6 +16,8 @@ public class ContextMenuController : MonoBehaviour
     [SerializeField] private GameObject contextMenu;
     [SerializeField] private ContextMenuAutoHide autoHide;
     [SerializeField] private ContextMenuEntry entryPrefab;
+    [Space]
+    [SerializeField] private Sound contextMenuSound;
 
     private bool contextMenuEnabled = false;
     private List<ContextMenuEntry> currentEntries = new();
@@ -55,6 +57,7 @@ public class ContextMenuController : MonoBehaviour
         autoHide.Hide += HideContextMenu;
 
         contextMenuEnabled = true;
+        Audio.Play(contextMenuSound);
     }
 
     private void SetContextMenuAlign(Vector2 menuPoint)
