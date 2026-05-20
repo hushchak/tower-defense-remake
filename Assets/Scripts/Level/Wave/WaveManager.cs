@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
+    [SerializeField] private EventChannelWaveData waveAnnounceChannel;
     [SerializeField] private EventChannel waveTriggerChannel;
     [SerializeField] private EventChannel waveStartChannel;
     [SerializeField] private EventChannel waveEndChannel;
@@ -15,6 +16,11 @@ public class WaveManager : MonoBehaviour
 
     private bool waveInProgress;
     private int currentWaveIndex;
+
+    private void Awake()
+    {
+        waveAnnounceChannel.Raise(data.Waves[currentWaveIndex]);
+    }
 
     private void OnEnable()
     {
@@ -49,6 +55,8 @@ public class WaveManager : MonoBehaviour
 
             if (currentWaveIndex >= data.Waves.Length)
                 allWaveEndChannel.Raise();
+            else
+                waveAnnounceChannel.Raise(data.Waves[currentWaveIndex]);
         }
         catch (OperationCanceledException)
         {

@@ -37,4 +37,6 @@ public class ObjectPool
         }
         return SpawnGameObject();
     }
+
+    public List<GameObject> GetAllExistingObjects() => pool;
 }
