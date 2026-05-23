@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class StartScreenRoot : SceneRoot
@@ -7,6 +8,13 @@ public class StartScreenRoot : SceneRoot
     public override void Initialize(SceneArgs args)
     {
         InputReader.OnStartPerformed += LoadLevelMenu;
+        InputReader.OnBackPerformed += ExitGame;
+    }
+
+    private void OnDestroy()
+    {
+        InputReader.OnStartPerformed -= LoadLevelMenu;
+        InputReader.OnBackPerformed -= ExitGame;
     }
 
     private async void LoadLevelMenu()
@@ -15,4 +23,6 @@ public class StartScreenRoot : SceneRoot
         Audio.Play(startGameSound, true);
         await SceneLoader.LoadScene(SceneList.Slots.Main, SceneList.Names.LevelMenu, SceneArgs.Empty);
     }
+
+    private void ExitGame() => Application.Quit();
 }
