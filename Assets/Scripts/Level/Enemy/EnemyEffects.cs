@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class EnemyEffects : MonoBehaviour
 {
+    public event Action<bool> OnTarred;
+
     private Coroutine slownessCoroutine;
     private SlownessData currentSlownessData;
     private float slownessEndTime;
@@ -17,6 +20,22 @@ public class EnemyEffects : MonoBehaviour
             : Mathf.Abs(currentSlownessData.Coefficient - 1f);
 
     public bool Tarred => tarred;
+
+    private void OnEnable()
+    {
+        slownessCoroutine = null;
+        currentSlownessData = null;
+        slownessEndTime = 0;
+
+        tarredCoroutine = null;
+        tarred = false;
+        tarredEndTime = 0;
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+    }
 
     public void StartSlownessEffect(SlownessData newData)
     {
@@ -57,10 +76,12 @@ public class EnemyEffects : MonoBehaviour
 
     private IEnumerator TarredRoutine()
     {
+        OnTarred?.Invoke(true);
         while (Time.time < tarredEndTime)
             yield return null;
 
         tarred = false;
         tarredCoroutine = null;
+        OnTarred?.Invoke(false);
     }
 }

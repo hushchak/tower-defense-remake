@@ -20,15 +20,15 @@ MonoBehaviour:
     RandomPitch: 0
   <AttackSound>k__BackingField:
     Clip: {fileID: 8300000, guid: a3d498daa944348839f996d18ea34ce6, type: 3}
-    Volume: 0.5
-    Pitch: 1
+    Volume: 0.1
+    Pitch: 0.8
     RandomPitch: 0.05
   <ProjectileRadius>k__BackingField: 0.2
   <ProjectileSpeed>k__BackingField: 15
   <ProjectilePrefab>k__BackingField: {fileID: 4534730106936269906, guid: 1ee44742a73b14ad7b9787d52557e056, type: 3}
   <Damage>k__BackingField: 5
   <DamageType>k__BackingField: 1
-  <AttackRate>k__BackingField: 0.07
+  <AttackRate>k__BackingField: 0.1
   <AttackRange>k__BackingField: 2
   <EnemyLayer>k__BackingField:
     serializedVersion: 2

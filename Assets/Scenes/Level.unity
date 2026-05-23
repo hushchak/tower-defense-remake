@@ -522,7 +522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2962114924620495276, guid: c20b30514ff544a0d9f645e638e40c6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: 2962114924620495276, guid: c20b30514ff544a0d9f645e638e40c6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1584,7 +1584,7 @@ MonoBehaviour:
     m_Top: -4
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: -9
+  m_Spacing: -6
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0

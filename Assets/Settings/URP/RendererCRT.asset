@@ -21,22 +21,22 @@ MonoBehaviour:
   preset: 6
   pixelResolutionX: 384
   pixelResolutionY: 216
-  screenBend: 0
-  screenOverscan: 0
+  screenBend: 3.4
+  screenOverscan: 0.5
   vignetteSize: 5.7
-  vignetteSmooth: 4.35
-  vignetteRound: 56.5
-  blur: 0.25
+  vignetteSmooth: 2.8
+  vignetteRound: 70
+  blur: 0.8
   bleed: 0
   smidge: 0
-  scanlinesStrength: 0
-  apertureStrength: 0.5
-  shadowlines: 5
-  shadowlinesSpeed: 2
-  shadowlinesAlpha: 0.017
-  noiseSize: 20.4
-  noiseSpeed: 1.82
-  noiseAlpha: 0.049
+  scanlinesStrength: 2.8
+  apertureStrength: 1
+  shadowlines: 3.5
+  shadowlinesSpeed: 0.5
+  shadowlinesAlpha: 0.1
+  noiseSize: 0
+  noiseSpeed: 0
+  noiseAlpha: 0
   glitchFrequency: 1
   glitchBands: 0
   glitchPosition: 0
@@ -51,10 +51,10 @@ MonoBehaviour:
   red: 1
   green: 1
   blue: 1
-  chromaticAberration: 0.25
-  redOffset: {x: 0.025, y: 0.025}
-  blueOffset: {x: 0, y: -0.035}
-  greenOffset: {x: -0.025, y: 0.025}
+  chromaticAberration: 0.5
+  redOffset: {x: 0.05, y: 0.05}
+  blueOffset: {x: 0, y: -0.07}
+  greenOffset: {x: -0.05, y: 0.05}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

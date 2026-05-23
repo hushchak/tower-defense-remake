@@ -267,4 +267,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySprite
   enemyMovement: {fileID: 4549744625557661207}
+  enemyEffects: {fileID: 8421028786568206983}
   spriteObject: {fileID: 6222071494099419395}
+  spriteRenderer: {fileID: 1013588362435036000}
+  regularColor: {r: 1, g: 1, b: 1, a: 1}
+  tarredColor: {r: 0.74901956, g: 0.535014, b: 0.43927464, a: 1}
