@@ -10,21 +10,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c069faf316c047eb8343fdc803140f4, type: 3}
-  m_Name: WaveData_1
+  m_Name: WaveData_Plains
   m_EditorClassIdentifier: Assembly-CSharp::WavesData
   <Waves>k__BackingField:
   - <Actions_1>k__BackingField:
     - <Enemy>k__BackingField: {fileID: 11400000, guid: fc3a4fd12bd5d43a9802dda3928badd2, type: 2}
       <Number>k__BackingField: 4
       <SpawnRate>k__BackingField: 1.5
-      <WaitAfter>k__BackingField: 3
+      <WaitAfter>k__BackingField: 0
     <Actions_2>k__BackingField: []
     <Actions_3>k__BackingField: []
   - <Actions_1>k__BackingField:
     - <Enemy>k__BackingField: {fileID: 11400000, guid: e6169eafdfbe344dd94c59864f155221, type: 2}
       <Number>k__BackingField: 5
       <SpawnRate>k__BackingField: 1.5
+      <WaitAfter>k__BackingField: 0
+    <Actions_2>k__BackingField: []
+    <Actions_3>k__BackingField: []
+  - <Actions_1>k__BackingField:
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: fc3a4fd12bd5d43a9802dda3928badd2, type: 2}
+      <Number>k__BackingField: 10
+      <SpawnRate>k__BackingField: 0.5
       <WaitAfter>k__BackingField: 3
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: e6169eafdfbe344dd94c59864f155221, type: 2}
+      <Number>k__BackingField: 10
+      <SpawnRate>k__BackingField: 1
+      <WaitAfter>k__BackingField: 0
+    <Actions_2>k__BackingField: []
+    <Actions_3>k__BackingField: []
+  - <Actions_1>k__BackingField:
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: fc3a4fd12bd5d43a9802dda3928badd2, type: 2}
+      <Number>k__BackingField: 10
+      <SpawnRate>k__BackingField: 0.5
+      <WaitAfter>k__BackingField: 3
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: a0f1382ea085f40f0a9de054506aa883, type: 2}
+      <Number>k__BackingField: 10
+      <SpawnRate>k__BackingField: 1
+      <WaitAfter>k__BackingField: 0
     <Actions_2>k__BackingField: []
     <Actions_3>k__BackingField: []
   - <Actions_1>k__BackingField:
@@ -36,45 +58,23 @@ MonoBehaviour:
       <Number>k__BackingField: 10
       <SpawnRate>k__BackingField: 1
       <WaitAfter>k__BackingField: 3
-    <Actions_2>k__BackingField: []
-    <Actions_3>k__BackingField: []
-  - <Actions_1>k__BackingField:
-    - <Enemy>k__BackingField: {fileID: 11400000, guid: fc3a4fd12bd5d43a9802dda3928badd2, type: 2}
-      <Number>k__BackingField: 10
-      <SpawnRate>k__BackingField: 0.5
-      <WaitAfter>k__BackingField: 3
-    - <Enemy>k__BackingField: {fileID: 11400000, guid: a0f1382ea085f40f0a9de054506aa883, type: 2}
-      <Number>k__BackingField: 10
-      <SpawnRate>k__BackingField: 1
-      <WaitAfter>k__BackingField: 3
-    <Actions_2>k__BackingField: []
-    <Actions_3>k__BackingField: []
-  - <Actions_1>k__BackingField:
-    - <Enemy>k__BackingField: {fileID: 11400000, guid: fc3a4fd12bd5d43a9802dda3928badd2, type: 2}
-      <Number>k__BackingField: 10
-      <SpawnRate>k__BackingField: 0.5
-      <WaitAfter>k__BackingField: 3
-    - <Enemy>k__BackingField: {fileID: 11400000, guid: e6169eafdfbe344dd94c59864f155221, type: 2}
-      <Number>k__BackingField: 10
-      <SpawnRate>k__BackingField: 1
-      <WaitAfter>k__BackingField: 3
     - <Enemy>k__BackingField: {fileID: 11400000, guid: a0f1382ea085f40f0a9de054506aa883, type: 2}
       <Number>k__BackingField: 10
       <SpawnRate>k__BackingField: 0.5
-      <WaitAfter>k__BackingField: 3
+      <WaitAfter>k__BackingField: 0
     <Actions_2>k__BackingField: []
     <Actions_3>k__BackingField: []
   - <Actions_1>k__BackingField:
     - <Enemy>k__BackingField: {fileID: 11400000, guid: 6ac5221bd1bea4c4fafb1155f494b0d5, type: 2}
       <Number>k__BackingField: 5
       <SpawnRate>k__BackingField: 1
-      <WaitAfter>k__BackingField: 3
+      <WaitAfter>k__BackingField: 0
     <Actions_2>k__BackingField: []
     <Actions_3>k__BackingField: []
   - <Actions_1>k__BackingField:
     - <Enemy>k__BackingField: {fileID: 11400000, guid: a0f1382ea085f40f0a9de054506aa883, type: 2}
       <Number>k__BackingField: 10
-      <SpawnRate>k__BackingField: 0.5
+      <SpawnRate>k__BackingField: 0.4
       <WaitAfter>k__BackingField: 3
     - <Enemy>k__BackingField: {fileID: 11400000, guid: e6169eafdfbe344dd94c59864f155221, type: 2}
       <Number>k__BackingField: 10
@@ -82,8 +82,8 @@ MonoBehaviour:
       <WaitAfter>k__BackingField: 3
     - <Enemy>k__BackingField: {fileID: 11400000, guid: a0f1382ea085f40f0a9de054506aa883, type: 2}
       <Number>k__BackingField: 5
-      <SpawnRate>k__BackingField: 0.5
-      <WaitAfter>k__BackingField: 3
+      <SpawnRate>k__BackingField: 0.35
+      <WaitAfter>k__BackingField: 0
     <Actions_2>k__BackingField: []
     <Actions_3>k__BackingField: []
   - <Actions_1>k__BackingField:
@@ -93,12 +93,12 @@ MonoBehaviour:
       <WaitAfter>k__BackingField: 3
     - <Enemy>k__BackingField: {fileID: 11400000, guid: e6169eafdfbe344dd94c59864f155221, type: 2}
       <Number>k__BackingField: 10
-      <SpawnRate>k__BackingField: 0.5
+      <SpawnRate>k__BackingField: 0.4
       <WaitAfter>k__BackingField: 3
     - <Enemy>k__BackingField: {fileID: 11400000, guid: e6169eafdfbe344dd94c59864f155221, type: 2}
       <Number>k__BackingField: 10
-      <SpawnRate>k__BackingField: 0.5
-      <WaitAfter>k__BackingField: 3
+      <SpawnRate>k__BackingField: 0.3
+      <WaitAfter>k__BackingField: 0
     <Actions_2>k__BackingField: []
     <Actions_3>k__BackingField: []
   - <Actions_1>k__BackingField:
@@ -112,12 +112,12 @@ MonoBehaviour:
       <WaitAfter>k__BackingField: 3
     - <Enemy>k__BackingField: {fileID: 11400000, guid: a0f1382ea085f40f0a9de054506aa883, type: 2}
       <Number>k__BackingField: 10
-      <SpawnRate>k__BackingField: 0.5
+      <SpawnRate>k__BackingField: 0.25
       <WaitAfter>k__BackingField: 3
     - <Enemy>k__BackingField: {fileID: 11400000, guid: e6169eafdfbe344dd94c59864f155221, type: 2}
       <Number>k__BackingField: 10
       <SpawnRate>k__BackingField: 0.5
-      <WaitAfter>k__BackingField: 3
+      <WaitAfter>k__BackingField: 0
     <Actions_2>k__BackingField: []
     <Actions_3>k__BackingField: []
   - <Actions_1>k__BackingField:
@@ -127,11 +127,11 @@ MonoBehaviour:
       <WaitAfter>k__BackingField: 5
     - <Enemy>k__BackingField: {fileID: 11400000, guid: fc3a4fd12bd5d43a9802dda3928badd2, type: 2}
       <Number>k__BackingField: 20
-      <SpawnRate>k__BackingField: 0.5
+      <SpawnRate>k__BackingField: 0.25
       <WaitAfter>k__BackingField: 3
     - <Enemy>k__BackingField: {fileID: 11400000, guid: a0f1382ea085f40f0a9de054506aa883, type: 2}
       <Number>k__BackingField: 10
-      <SpawnRate>k__BackingField: 0.5
+      <SpawnRate>k__BackingField: 0.25
       <WaitAfter>k__BackingField: 3
     - <Enemy>k__BackingField: {fileID: 11400000, guid: 6ac5221bd1bea4c4fafb1155f494b0d5, type: 2}
       <Number>k__BackingField: 10
@@ -140,6 +140,6 @@ MonoBehaviour:
     - <Enemy>k__BackingField: {fileID: 11400000, guid: e6169eafdfbe344dd94c59864f155221, type: 2}
       <Number>k__BackingField: 10
       <SpawnRate>k__BackingField: 0.5
-      <WaitAfter>k__BackingField: 3
+      <WaitAfter>k__BackingField: 0
     <Actions_2>k__BackingField: []
     <Actions_3>k__BackingField: []
