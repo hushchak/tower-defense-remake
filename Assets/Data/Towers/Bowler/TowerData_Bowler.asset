@@ -29,7 +29,7 @@ MonoBehaviour:
   <Damage>k__BackingField: 5
   <DamageType>k__BackingField: 2
   <AttackRate>k__BackingField: 1.5
-  <AttackRange>k__BackingField: 3
+  <AttackRange>k__BackingField: 4
   <EnemyLayer>k__BackingField:
     serializedVersion: 2
     m_Bits: 64

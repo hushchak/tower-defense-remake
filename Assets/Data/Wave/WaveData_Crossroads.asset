@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c069faf316c047eb8343fdc803140f4, type: 3}
+  m_Name: WaveData_Crossroads
+  m_EditorClassIdentifier: Assembly-CSharp::WavesData
+  <Waves>k__BackingField:
+  - <Actions_1>k__BackingField:
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: fc3a4fd12bd5d43a9802dda3928badd2, type: 2}
+      <Number>k__BackingField: 8
+      <SpawnRate>k__BackingField: 1
+      <WaitAfter>k__BackingField: 0
+    <Actions_2>k__BackingField: []
+    <Actions_3>k__BackingField: []
+  - <Actions_1>k__BackingField:
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: e6169eafdfbe344dd94c59864f155221, type: 2}
+      <Number>k__BackingField: 6
+      <SpawnRate>k__BackingField: 1
+      <WaitAfter>k__BackingField: 3
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: fc3a4fd12bd5d43a9802dda3928badd2, type: 2}
+      <Number>k__BackingField: 6
+      <SpawnRate>k__BackingField: 0.5
+      <WaitAfter>k__BackingField: 0
+    <Actions_2>k__BackingField: []
+    <Actions_3>k__BackingField: []
+  - <Actions_1>k__BackingField:
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: 6ac5221bd1bea4c4fafb1155f494b0d5, type: 2}
+      <Number>k__BackingField: 5
+      <SpawnRate>k__BackingField: 1.25
+      <WaitAfter>k__BackingField: 0
+    <Actions_2>k__BackingField: []
+    <Actions_3>k__BackingField: []
+  - <Actions_1>k__BackingField:
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: a0f1382ea085f40f0a9de054506aa883, type: 2}
+      <Number>k__BackingField: 15
+      <SpawnRate>k__BackingField: 0.5
+      <WaitAfter>k__BackingField: 0
+    <Actions_2>k__BackingField: []
+    <Actions_3>k__BackingField: []
+  - <Actions_1>k__BackingField:
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: e6169eafdfbe344dd94c59864f155221, type: 2}
+      <Number>k__BackingField: 10
+      <SpawnRate>k__BackingField: 1
+      <WaitAfter>k__BackingField: 3
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: 6ac5221bd1bea4c4fafb1155f494b0d5, type: 2}
+      <Number>k__BackingField: 10
+      <SpawnRate>k__BackingField: 1
+      <WaitAfter>k__BackingField: 0
+    <Actions_2>k__BackingField: []
+    <Actions_3>k__BackingField: []
+  - <Actions_1>k__BackingField:
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: e6169eafdfbe344dd94c59864f155221, type: 2}
+      <Number>k__BackingField: 15
+      <SpawnRate>k__BackingField: 1
+      <WaitAfter>k__BackingField: 3
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: 6ac5221bd1bea4c4fafb1155f494b0d5, type: 2}
+      <Number>k__BackingField: 10
+      <SpawnRate>k__BackingField: 1
+      <WaitAfter>k__BackingField: 3
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: a0f1382ea085f40f0a9de054506aa883, type: 2}
+      <Number>k__BackingField: 20
+      <SpawnRate>k__BackingField: 0.25
+      <WaitAfter>k__BackingField: 0
+    <Actions_2>k__BackingField: []
+    <Actions_3>k__BackingField: []
+  - <Actions_1>k__BackingField:
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: 6ac5221bd1bea4c4fafb1155f494b0d5, type: 2}
+      <Number>k__BackingField: 10
+      <SpawnRate>k__BackingField: 1
+      <WaitAfter>k__BackingField: 3
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: a0f1382ea085f40f0a9de054506aa883, type: 2}
+      <Number>k__BackingField: 15
+      <SpawnRate>k__BackingField: 0.25
+      <WaitAfter>k__BackingField: 3
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: 6ac5221bd1bea4c4fafb1155f494b0d5, type: 2}
+      <Number>k__BackingField: 10
+      <SpawnRate>k__BackingField: 0.5
+      <WaitAfter>k__BackingField: 0
+    <Actions_2>k__BackingField: []
+    <Actions_3>k__BackingField: []
+  - <Actions_1>k__BackingField:
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: a0f1382ea085f40f0a9de054506aa883, type: 2}
+      <Number>k__BackingField: 30
+      <SpawnRate>k__BackingField: 0.25
+      <WaitAfter>k__BackingField: 0
+    <Actions_2>k__BackingField: []
+    <Actions_3>k__BackingField: []
+  - <Actions_1>k__BackingField:
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: e6169eafdfbe344dd94c59864f155221, type: 2}
+      <Number>k__BackingField: 20
+      <SpawnRate>k__BackingField: 0.75
+      <WaitAfter>k__BackingField: 3
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: a0f1382ea085f40f0a9de054506aa883, type: 2}
+      <Number>k__BackingField: 15
+      <SpawnRate>k__BackingField: 0.25
+      <WaitAfter>k__BackingField: 3
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: 6ac5221bd1bea4c4fafb1155f494b0d5, type: 2}
+      <Number>k__BackingField: 15
+      <SpawnRate>k__BackingField: 1
+      <WaitAfter>k__BackingField: 3
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: a0f1382ea085f40f0a9de054506aa883, type: 2}
+      <Number>k__BackingField: 15
+      <SpawnRate>k__BackingField: 0.25
+      <WaitAfter>k__BackingField: 0
+    <Actions_2>k__BackingField: []
+    <Actions_3>k__BackingField: []
+  - <Actions_1>k__BackingField:
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: 123b883c9a4304bfca43fc54bdcb2ffd, type: 2}
+      <Number>k__BackingField: 1
+      <SpawnRate>k__BackingField: 0
+      <WaitAfter>k__BackingField: 1
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: 6ac5221bd1bea4c4fafb1155f494b0d5, type: 2}
+      <Number>k__BackingField: 20
+      <SpawnRate>k__BackingField: 1
+      <WaitAfter>k__BackingField: 3
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: a0f1382ea085f40f0a9de054506aa883, type: 2}
+      <Number>k__BackingField: 20
+      <SpawnRate>k__BackingField: 0.25
+      <WaitAfter>k__BackingField: 3
+    - <Enemy>k__BackingField: {fileID: 11400000, guid: 123b883c9a4304bfca43fc54bdcb2ffd, type: 2}
+      <Number>k__BackingField: 2
+      <SpawnRate>k__BackingField: 1
+      <WaitAfter>k__BackingField: 0
+    <Actions_2>k__BackingField: []
+    <Actions_3>k__BackingField: []
