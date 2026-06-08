@@ -5,6 +5,7 @@ public class TowerData : ScriptableObject
 {
     [field: SerializeField] public Sprite ProjectileSprite { get; private set; }
     [field: SerializeField] public Sound UpgradeSound { get; private set; }
+    [field: SerializeField] public Sound UpgradeCancelSound { get; private set; }
     [field: SerializeField] public Sound AttackSound { get; private set; }
     [field: Space]
     [field: SerializeField] public float ProjectileRadius { get; private set; } = 0.2f;

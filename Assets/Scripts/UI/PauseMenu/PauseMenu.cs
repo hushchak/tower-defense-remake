@@ -8,6 +8,9 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private EventChannelBool levelEndChannel;
     [Space]
     [SerializeField] private GameObject pausePanel;
+    [Space]
+    [SerializeField] private Sound openSound;
+    [SerializeField] private Sound closeSound;
 
     private bool pauseMenuEnabled;
     private bool canPause = true;
@@ -55,9 +58,22 @@ public class PauseMenu : MonoBehaviour
             HidePausePanel();
     }
 
-    private void InitiatePausePanel() => pausePanel.SetActive(true);
-    private void HidePausePanel() => pausePanel.SetActive(false);
+    private void InitiatePausePanel()
+    {
+        Audio.Play(openSound, true);
+        pausePanel.SetActive(true);
+    }
+
+    private void HidePausePanel()
+    {
+        Audio.Play(closeSound, true);
+        pausePanel.SetActive(false);
+    }
 
     public void ResumeButtonAction() => SetPauseMenu(false);
-    public void ExitButtonAction() => levelExitInitiationChannel.Raise();
+    public void ExitButtonAction()
+    {
+        Audio.Play(closeSound, true);
+        levelExitInitiationChannel.Raise();
+    }
 }

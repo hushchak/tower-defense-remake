@@ -53,6 +53,16 @@ MonoBehaviour:
   allWaveEndChannel: {fileID: 11400000, guid: ee403228dd5354efa9d8393e7bb4e4e0, type: 2}
   waveSpawner: {fileID: 8778907790914460697}
   data: {fileID: 11400000, guid: 0fa080d1cb70f4684b43dd08c3158381, type: 2}
+  waveStartSound:
+    Clip: {fileID: 8300000, guid: 81a1f630f3e834606bede09a345c3483, type: 3}
+    Volume: 1
+    Pitch: 1
+    RandomPitch: 0
+  waveEndSound:
+    Clip: {fileID: 8300000, guid: a4c69daa2d360417f8d0468c9b3aa728, type: 3}
+    Volume: 1
+    Pitch: 1
+    RandomPitch: 0
 --- !u!114 &8778907790914460697
 MonoBehaviour:
   m_ObjectHideFlags: 0

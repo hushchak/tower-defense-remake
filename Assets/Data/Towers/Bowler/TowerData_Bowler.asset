@@ -18,6 +18,11 @@ MonoBehaviour:
     Volume: 0.6
     Pitch: 1
     RandomPitch: 0
+  <UpgradeCancelSound>k__BackingField:
+    Clip: {fileID: 8300000, guid: 36eb42e3623c84fba91c7f8b0d5354fe, type: 3}
+    Volume: 0.6
+    Pitch: 1
+    RandomPitch: 0
   <AttackSound>k__BackingField:
     Clip: {fileID: 8300000, guid: 0c1ea65c48cb14c67a6e316ab29537df, type: 3}
     Volume: 0.5

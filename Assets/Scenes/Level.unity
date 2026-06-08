@@ -404,6 +404,16 @@ MonoBehaviour:
   levelExitInitiationChannel: {fileID: 11400000, guid: 7a17581395e974861b0f92dc5b91af14, type: 2}
   levelEndChannel: {fileID: 11400000, guid: d37444f431a1a4398a54fcb73385e343, type: 2}
   pausePanel: {fileID: 856213333}
+  openSound:
+    Clip: {fileID: 8300000, guid: e897a57a9726d41e2bfff543c70c57db, type: 3}
+    Volume: 1
+    Pitch: 1
+    RandomPitch: 0
+  closeSound:
+    Clip: {fileID: 8300000, guid: 5752c361988ee47a08a4b7a56404d720, type: 3}
+    Volume: 1
+    Pitch: 1
+    RandomPitch: 0
 --- !u!114 &103538705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1102,7 +1112,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ContextMenuAutoHide
   menuRect: {fileID: 422461638}
+  worldPadding: 0.1
   hideDelay: 0.2
+  framesToIgnore: 2
 --- !u!1 &464541505
 GameObject:
   m_ObjectHideFlags: 0

@@ -33,7 +33,7 @@ public abstract class Tower : MonoBehaviour
         }
         else if (!PlayerMoney.Instance.TryDecreaseMoney(Mathf.Abs(responce.MoneyDifference)))
         {
-            Debug.Log("Not enough money to place/upgrade tower");
+            Audio.Play(Data.UpgradeCancelSound);
             return;
         }
 

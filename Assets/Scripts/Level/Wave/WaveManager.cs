@@ -13,6 +13,9 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private WaveSpawner waveSpawner;
     [Space]
     [SerializeField] private WavesData data;
+    [Space]
+    [SerializeField] private Sound waveStartSound;
+    [SerializeField] private Sound waveEndSound;
 
     private bool waveInProgress;
     private int currentWaveIndex;
@@ -69,7 +72,8 @@ public class WaveManager : MonoBehaviour
 
     private async Awaitable HandleWave(CancellationToken cancellationToken)
     {
-        Debug.Log("Wave started");
+        Audio.Play(waveStartSound);
         await waveSpawner.SpawnWave(data.Waves[currentWaveIndex], cancellationToken);
+        Audio.Play(waveEndSound);
     }
 }
